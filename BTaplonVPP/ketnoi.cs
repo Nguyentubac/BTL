@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BTaplonVPP
-{
+{///
     internal class ketnoi
     {
         SqlConnection conn;
