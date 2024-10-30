@@ -1,0 +1,302 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BaiTapLonC#\\BTaplonVPP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|d:\\baitaplonc#\\btaplonvpp\\ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:ketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fadminxacnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fadminxacnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fstaffmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fstaffmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fadminxacnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fadminxacnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fhoadonxuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fhoadonxuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fhoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fhoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|D:\\BaiTapLonC#\\BTaplonVPP\\fnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FKhachHang.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FKhachHang.cs",
+              "RelativeDocumentMoniker": "FKhachHang.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FKhachHang.cs",
+              "RelativeToolTip": "FKhachHang.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:49:08.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FKhachHang.cs",
+              "RelativeDocumentMoniker": "FKhachHang.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FKhachHang.cs [Design]",
+              "RelativeToolTip": "FKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:46:25.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FManager.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FManager.cs",
+              "RelativeDocumentMoniker": "FManager.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FManager.cs",
+              "RelativeToolTip": "FManager.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAtwDsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:41:25.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FAdminXacNhan.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FAdminXacNhan.cs",
+              "RelativeDocumentMoniker": "FAdminXacNhan.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FAdminXacNhan.cs",
+              "RelativeToolTip": "FAdminXacNhan.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAD4vxUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:54:59.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FSignUp.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FSignUp.cs",
+              "RelativeDocumentMoniker": "FSignUp.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FSignUp.cs",
+              "RelativeToolTip": "FSignUp.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAewCQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:50:06.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FProfile.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FProfile.cs",
+              "RelativeDocumentMoniker": "FProfile.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FProfile.cs",
+              "RelativeToolTip": "FProfile.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAD4vxsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:47:12.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FProfile.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FProfile.cs",
+              "RelativeDocumentMoniker": "FProfile.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FProfile.cs [Design]",
+              "RelativeToolTip": "FProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:38:03.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FSignUp.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FSignUp.cs",
+              "RelativeDocumentMoniker": "FSignUp.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FSignUp.cs [Design]",
+              "RelativeToolTip": "FSignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:38:02.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FLogin.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FLogin.cs",
+              "RelativeDocumentMoniker": "FLogin.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FLogin.cs [Design]",
+              "RelativeToolTip": "FLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:23:25.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FNhaCungCap.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FNhaCungCap.cs",
+              "RelativeDocumentMoniker": "FNhaCungCap.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FNhaCungCap.cs",
+              "RelativeToolTip": "FNhaCungCap.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:12:02.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FNhaCungCap.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FNhaCungCap.cs",
+              "RelativeDocumentMoniker": "FNhaCungCap.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FNhaCungCap.cs [Design]",
+              "RelativeToolTip": "FNhaCungCap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:08:19.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FAdminXacNhan.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FAdminXacNhan.cs",
+              "RelativeDocumentMoniker": "FAdminXacNhan.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FAdminXacNhan.cs [Design]",
+              "RelativeToolTip": "FAdminXacNhan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T11:39:20.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FStaffManager.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FStaffManager.cs",
+              "RelativeDocumentMoniker": "FStaffManager.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FStaffManager.cs [Design]",
+              "RelativeToolTip": "FStaffManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T11:37:20.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ketnoi.cs",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\ketnoi.cs",
+              "RelativeDocumentMoniker": "ketnoi.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\ketnoi.cs",
+              "RelativeToolTip": "ketnoi.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAYwA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T11:28:04.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FHoaDonNhap.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FHoaDonNhap.cs",
+              "RelativeDocumentMoniker": "FHoaDonNhap.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FHoaDonNhap.cs [Design]",
+              "RelativeToolTip": "FHoaDonNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T16:50:29.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FProductManager.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FProductManager.cs",
+              "RelativeDocumentMoniker": "FProductManager.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FProductManager.cs [Design]",
+              "RelativeToolTip": "FProductManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T16:40:02.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FHoaDonXuat.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FHoaDonXuat.cs",
+              "RelativeDocumentMoniker": "FHoaDonXuat.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FHoaDonXuat.cs [Design]",
+              "RelativeToolTip": "FHoaDonXuat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T16:39:33.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FManager.cs [Design]",
+              "DocumentMoniker": "D:\\BaiTapLonC#\\BTaplonVPP\\FManager.cs",
+              "RelativeDocumentMoniker": "FManager.cs",
+              "ToolTip": "D:\\BaiTapLonC#\\BTaplonVPP\\FManager.cs [Design]",
+              "RelativeToolTip": "FManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T16:39:02.441Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
