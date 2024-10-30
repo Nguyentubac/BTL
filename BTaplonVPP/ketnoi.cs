@@ -16,7 +16,7 @@ namespace BTaplonVPP
         {
             string sql = @"Data Source=DESKTOP-M6B6C7R\SQL;Initial Catalog=VPP;Integrated Security=True";
             conn = new SqlConnection(sql);
-            //aa
+            //aaa
             conn.Open();
         }
         public void dongkn()
