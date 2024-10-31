@@ -146,7 +146,7 @@ namespace BTaplonVPP
 
             dongkn(); // Đóng kết nối
         }
-        //Admin
+        //NhanSu
         public bool TonTaiAdmin(string ma, string pass)
         {
             bool kt = false;
@@ -172,7 +172,55 @@ namespace BTaplonVPP
             cmd.ExecuteNonQuery();
             dongkn();
         }
+        public DataTable getAllNS()
+        {
+            DataTable table = new DataTable();
+            mokn();
+            string sql = "select * from tbNhanSu";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            table.Load(sdr);
+            dongkn();
+            return table;
+        }
+        public bool TonTaiNS(string ma)
+        {
+            bool kt = false;
+            mokn();
+            string sql = "select * from tbNhanSu where MaNs=@ma";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("ma", ma);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.HasRows) kt = true;
+            dongkn();
+            return kt;
+        }
+        public void SuaNS(string ma, string ten, string namsinh, string sdt, string diachi)
+        {
+            mokn(); // Mở kết nối
+            string sql = "UPDATE tbNhanSu SET Ten = @ten,Tuoi = @tuoi, SDT = @sdt,DiaChi = @diachi, NamSinh = @namsinh " +
+                " WHEREMaNs = @mans;";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@ma", ma);
+            cmd.Parameters.AddWithValue("@ten", ten);
+            cmd.Parameters.AddWithValue("@sdt", sdt);
+            cmd.Parameters.AddWithValue("@diachi", diachi);
+            cmd.Parameters.AddWithValue("@namsinh", namsinh);
+            // Thực thi câu lệnh
+            cmd.ExecuteNonQuery();
 
+            dongkn(); // Đóng kết nối
+        }
+        public void XoaNS(string ma)
+        {
+
+            mokn();
+            string sql = "delete tbNhanSu where MaNs =@ma";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("ma", ma);
+            cmd.ExecuteNonQuery();
+            dongkn();
+        }
 
         //San pham
         public DataTable getAllSP()
@@ -221,7 +269,7 @@ namespace BTaplonVPP
             cmd.ExecuteNonQuery();
             dongkn();
         }
-        public void SuaSP(string ma, string ten, string loaisp, string dg, string sl)
+        public void SuaSP(string ma, string ten, string loaisp, float dg, string sl)
         {
             mokn(); // Mở kết nối
             string sql = "UPDATE tbSanPham SET TenSP = @ten, SoLuong = @sl, DonGia = @dg, Loai = @loai WHERE MaSp = @ma";

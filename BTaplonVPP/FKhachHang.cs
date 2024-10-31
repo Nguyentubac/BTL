@@ -104,5 +104,25 @@ namespace BTaplonVPP
         {
             DuaDLVaoBang();
         }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
+            if (kncsdl.TonTaiKH(txt_makh.Text.Trim()))
+            {
+                kncsdl.SuaKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
+                DuaDLVaoBang();
+                ClearTexts();
+                MessageBox.Show("Sửa thành công!");
+            }
+            else
+            {
+                if (MessageBox.Show("Không tồn tại khách hàng nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                {
+                    btn_add_Click(sender, e);
+
+                }
+            }
+        }
     }
 }

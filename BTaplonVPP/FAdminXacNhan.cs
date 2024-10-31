@@ -33,6 +33,8 @@ namespace BTaplonVPP
                 kncsdl.ThemAdmin(a, b, c, d);
                 this.Close();
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
+                FStaffManager fStaffManager = new FStaffManager();
+                fStaffManager.ShowDialog();
             }
             else
             {
