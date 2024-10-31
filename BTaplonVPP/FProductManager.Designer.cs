@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(10, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(588, 402);
             this.panel1.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(330, 3);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(254, 279);
             this.panel4.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.txt_sluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_sluong.Location = new System.Drawing.Point(94, 242);
-            this.txt_sluong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_sluong.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sluong.Name = "txt_sluong";
             this.txt_sluong.Size = new System.Drawing.Size(158, 26);
             this.txt_sluong.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.txt_dgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dgia.Location = new System.Drawing.Point(94, 196);
-            this.txt_dgia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_dgia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_dgia.Name = "txt_dgia";
             this.txt_dgia.Size = new System.Drawing.Size(158, 26);
             this.txt_dgia.TabIndex = 2;
@@ -114,7 +114,7 @@
             // 
             this.txt_loaisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_loaisp.Location = new System.Drawing.Point(94, 151);
-            this.txt_loaisp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_loaisp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_loaisp.Name = "txt_loaisp";
             this.txt_loaisp.Size = new System.Drawing.Size(158, 26);
             this.txt_loaisp.TabIndex = 2;
@@ -134,7 +134,7 @@
             // 
             this.txt_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tensp.Location = new System.Drawing.Point(94, 104);
-            this.txt_tensp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_tensp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tensp.Name = "txt_tensp";
             this.txt_tensp.Size = new System.Drawing.Size(158, 26);
             this.txt_tensp.TabIndex = 2;
@@ -143,7 +143,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(94, 104);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(158, 26);
             this.textBox2.TabIndex = 2;
@@ -163,7 +163,7 @@
             // 
             this.txt_masp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_masp.Location = new System.Drawing.Point(94, 56);
-            this.txt_masp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_masp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_masp.Name = "txt_masp";
             this.txt_masp.Size = new System.Drawing.Size(158, 26);
             this.txt_masp.TabIndex = 2;
@@ -206,7 +206,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(249, 40);
             this.panel5.TabIndex = 1;
@@ -241,7 +241,7 @@
             this.panel3.Controls.Add(this.btn_update);
             this.panel3.Controls.Add(this.btn_add);
             this.panel3.Location = new System.Drawing.Point(330, 287);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(254, 109);
             this.panel3.TabIndex = 1;
@@ -250,7 +250,7 @@
             // 
             this.btn_thoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.Location = new System.Drawing.Point(137, 63);
-            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(112, 39);
             this.btn_thoat.TabIndex = 6;
@@ -262,7 +262,7 @@
             // 
             this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(4, 63);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(112, 39);
             this.btn_delete.TabIndex = 7;
@@ -274,7 +274,7 @@
             // 
             this.btn_update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Location = new System.Drawing.Point(137, 11);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(112, 39);
             this.btn_update.TabIndex = 5;
@@ -286,7 +286,7 @@
             // 
             this.btn_add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(4, 11);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(112, 39);
             this.btn_add.TabIndex = 4;
@@ -301,7 +301,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.grv_dssp);
             this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(327, 395);
             this.panel2.TabIndex = 0;
@@ -321,7 +321,7 @@
             // 
             this.grv_dssp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grv_dssp.Location = new System.Drawing.Point(0, 45);
-            this.grv_dssp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grv_dssp.Margin = new System.Windows.Forms.Padding(2);
             this.grv_dssp.Name = "grv_dssp";
             this.grv_dssp.RowHeadersWidth = 51;
             this.grv_dssp.RowTemplate.Height = 24;
@@ -332,9 +332,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 419);
+            this.ClientSize = new System.Drawing.Size(608, 424);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FProductManager";
             this.Text = "FProductManager";
             this.panel1.ResumeLayout(false);
