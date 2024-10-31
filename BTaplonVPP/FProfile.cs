@@ -24,8 +24,8 @@ namespace BTaplonVPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FAdminXacNhan fAdminXacNhan = new FAdminXacNhan();
-            fAdminXacNhan.Show();
+            //FAdminXacNhan fAdminXacNhan = new FAdminXacNhan();
+            //fAdminXacNhan.Show();
         }
     }
 }

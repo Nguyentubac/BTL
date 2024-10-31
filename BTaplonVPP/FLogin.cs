@@ -14,6 +14,7 @@ namespace BTaplonVPP
     public partial class FLogin : Form
     {
         bool flagEye = true;
+        ketnoi kncsdl = new ketnoi();
         public FLogin()
         {
       
@@ -22,7 +23,6 @@ namespace BTaplonVPP
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             
         }
-        
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             
@@ -56,15 +56,24 @@ namespace BTaplonVPP
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            FManager fm = new FManager();
-            this.Hide();
-            fm.ShowDialog();
-            this.Show();
+        {   
+            if (kncsdl.TonTaiAdmin(txt_tentk.Text, txt_mk.Text))
+            {
+                FManager fm = new FManager();
+                this.Hide();
+                fm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai mk hoặc tài khoản");
+            }
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   
             FSignUp fc = new FSignUp();
             this.Hide();
             fc.ShowDialog();

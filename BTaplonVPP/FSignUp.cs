@@ -29,14 +29,21 @@ namespace BTaplonVPP
 
 
         private void button2_Click(object sender, EventArgs e)
-        {       
-                if (MessageBox.Show("Bạn phải xác nhận quyền admin", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+        {
+            if (MessageBox.Show("Bạn phải xác nhận quyền admin", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                if (txt_mk.Text == textBox1.Text)
                 {
-                    FAdminXacNhan fa = new FAdminXacNhan();
+                    FAdminXacNhan fa = new FAdminXacNhan(txtMaNs.Text, txt_tentk.Text, txt_mk.Text, comboBox1.Text);
                     fa.ShowDialog();
-                    
-                    MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
+                    this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("mật khẩu không khớp");
+                }
+            }
+        
                 
             
         }

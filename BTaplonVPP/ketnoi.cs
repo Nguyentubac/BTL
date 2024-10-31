@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,8 @@ namespace BTaplonVPP
 
         public void mokn()
         {
-            string sql = @"Data Source=DESKTOP-M6B6C7R\SQL;Initial Catalog=VPP;Integrated Security=True";
+            string sql = @"Data Source=HANIE-K2\TUBAC;Initial Catalog=VPP;Integrated Security=True;";
             conn = new SqlConnection(sql);
-            //aaa
             conn.Open();
         }
         public void dongkn()
@@ -146,6 +146,33 @@ namespace BTaplonVPP
 
             dongkn(); // Đóng kết nối
         }
+        //Admin
+        public bool TonTaiAdmin(string ma, string pass)
+        {
+            bool kt = false;
+            mokn();
+            string sql = "select * from tbNhanSu where TenTaiKhoan=@tk and MatKhau = @mk ";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("tk", ma);
+            cmd.Parameters.AddWithValue("mk", pass);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            if (sdr.HasRows) kt = true;
+            dongkn();
+            return kt;
+        }
+        public void ThemAdmin(string mans, string tentk, string mk, string quyen)
+        {
+            mokn();
+            string sql = "INSERT INTO tbNhanSu(MaNS,TenTaiKhoan, MatKhau, Quyen) VALUES(@mans, @tentk, @mk, @quyen)";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("mans", mans);
+            cmd.Parameters.AddWithValue("tentk", tentk);
+            cmd.Parameters.AddWithValue("mk", mk);
+            cmd.Parameters.AddWithValue("quyen", quyen);
+            cmd.ExecuteNonQuery();
+            dongkn();
+        }
+
 
         //San pham
         public DataTable getAllSP()
