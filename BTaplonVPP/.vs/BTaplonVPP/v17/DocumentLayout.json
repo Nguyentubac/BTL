@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\BTL\\BTaplonVPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|E:\\BTL\\BTaplonVPP\\fproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|e:\\btl\\btaplonvpp\\fproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fstaffmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|e:\\btl\\btaplonvpp\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|E:\\BTL\\BTaplonVPP\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9D09E835-D105-4D24-816B-8FB41F8C202A}|BTaplonVPP.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -148,8 +148,7 @@
               "RelativeToolTip": "FStaffManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwE0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T17:23:36.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T17:23:36.012Z"
             },
             {
               "$type": "Document",
@@ -160,8 +159,7 @@
               "ToolTip": "E:\\BTL\\BTaplonVPP\\FStaffManager.cs [Design]",
               "RelativeToolTip": "FStaffManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T11:37:20.572Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T11:37:20.572Z"
             },
             {
               "$type": "Document",
@@ -172,8 +170,7 @@
               "ToolTip": "E:\\BTL\\BTaplonVPP\\FSignUp.cs [Design]",
               "RelativeToolTip": "FSignUp.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:38:02.226Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T15:38:02.226Z"
             },
             {
               "$type": "Document",
@@ -219,8 +216,7 @@
               "ToolTip": "E:\\BTL\\BTaplonVPP\\FProductManager.cs [Design]",
               "RelativeToolTip": "FProductManager.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:40:02.362Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-18T16:40:02.362Z"
             },
             {
               "$type": "Document",
