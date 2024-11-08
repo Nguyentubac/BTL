@@ -68,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(10, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 402);
+            this.panel1.Size = new System.Drawing.Size(605, 402);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -89,13 +89,13 @@
             this.panel4.Location = new System.Drawing.Point(330, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 279);
+            this.panel4.Size = new System.Drawing.Size(273, 279);
             this.panel4.TabIndex = 2;
             // 
             // txt_sluong
             // 
             this.txt_sluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sluong.Location = new System.Drawing.Point(94, 242);
+            this.txt_sluong.Location = new System.Drawing.Point(105, 240);
             this.txt_sluong.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sluong.Name = "txt_sluong";
             this.txt_sluong.Size = new System.Drawing.Size(158, 26);
@@ -104,7 +104,7 @@
             // txt_dgia
             // 
             this.txt_dgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_dgia.Location = new System.Drawing.Point(94, 196);
+            this.txt_dgia.Location = new System.Drawing.Point(105, 194);
             this.txt_dgia.Margin = new System.Windows.Forms.Padding(2);
             this.txt_dgia.Name = "txt_dgia";
             this.txt_dgia.Size = new System.Drawing.Size(158, 26);
@@ -113,7 +113,7 @@
             // txt_loaisp
             // 
             this.txt_loaisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_loaisp.Location = new System.Drawing.Point(94, 151);
+            this.txt_loaisp.Location = new System.Drawing.Point(105, 149);
             this.txt_loaisp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_loaisp.Name = "txt_loaisp";
             this.txt_loaisp.Size = new System.Drawing.Size(158, 26);
@@ -133,7 +133,7 @@
             // txt_tensp
             // 
             this.txt_tensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tensp.Location = new System.Drawing.Point(94, 104);
+            this.txt_tensp.Location = new System.Drawing.Point(105, 102);
             this.txt_tensp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tensp.Name = "txt_tensp";
             this.txt_tensp.Size = new System.Drawing.Size(158, 26);
@@ -162,7 +162,7 @@
             // txt_masp
             // 
             this.txt_masp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_masp.Location = new System.Drawing.Point(94, 56);
+            this.txt_masp.Location = new System.Drawing.Point(105, 54);
             this.txt_masp.Margin = new System.Windows.Forms.Padding(2);
             this.txt_masp.Name = "txt_masp";
             this.txt_masp.Size = new System.Drawing.Size(158, 26);
@@ -208,7 +208,7 @@
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(249, 40);
+            this.panel5.Size = new System.Drawing.Size(268, 40);
             this.panel5.TabIndex = 1;
             // 
             // label3
@@ -243,13 +243,13 @@
             this.panel3.Location = new System.Drawing.Point(330, 287);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(254, 109);
+            this.panel3.Size = new System.Drawing.Size(271, 109);
             this.panel3.TabIndex = 1;
             // 
             // btn_thoat
             // 
             this.btn_thoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(137, 63);
+            this.btn_thoat.Location = new System.Drawing.Point(151, 63);
             this.btn_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(112, 39);
@@ -273,7 +273,7 @@
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(137, 11);
+            this.btn_update.Location = new System.Drawing.Point(151, 11);
             this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(112, 39);
@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 424);
+            this.ClientSize = new System.Drawing.Size(641, 424);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FProductManager";

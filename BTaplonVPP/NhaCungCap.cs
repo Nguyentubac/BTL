@@ -92,5 +92,17 @@ namespace BTaplonVPP
                 MessageBox.Show("Sửa ko thành công!");
             }
         }
+        public bool Isvalid_NS(string ma)
+        {
+            string sql = "select * from tbNhaCungCap where MaNCC=@ma";
+            SqlParameter[] sp = new SqlParameter[] {
+                new SqlParameter("@ma",ma)
+                };
+            if (kn.ReadData(sql, sp) != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

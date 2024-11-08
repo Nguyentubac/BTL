@@ -113,5 +113,17 @@ namespace BTaplonVPP
             };
             kn.CreateUpdateDelete(sql, sp);
         }
+        public bool Isvalid_SP(string masp)
+        {
+            string sql = "select * from tbSanPham where MaSp=@ma";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@ma",masp)
+            };
+            if (kn.ReadData(sql, sp) != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
