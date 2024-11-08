@@ -58,14 +58,13 @@
             // 
             this.grv_dskh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grv_dskh.Location = new System.Drawing.Point(0, 45);
-            this.grv_dskh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grv_dskh.Margin = new System.Windows.Forms.Padding(2);
             this.grv_dskh.Name = "grv_dskh";
             this.grv_dskh.RowHeadersWidth = 51;
             this.grv_dskh.RowTemplate.Height = 24;
             this.grv_dskh.Size = new System.Drawing.Size(321, 250);
             this.grv_dskh.TabIndex = 0;
             this.grv_dskh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dskh_CellClick);
-            this.grv_dskh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dskh_CellContentClick);
             // 
             // panel2
             // 
@@ -74,7 +73,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.grv_dskh);
             this.panel2.Location = new System.Drawing.Point(3, 6);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(327, 310);
             this.panel2.TabIndex = 0;
@@ -94,7 +93,7 @@
             // 
             this.txt_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_sdt.Location = new System.Drawing.Point(115, 143);
-            this.txt_sdt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_sdt.Margin = new System.Windows.Forms.Padding(2);
             this.txt_sdt.Name = "txt_sdt";
             this.txt_sdt.Size = new System.Drawing.Size(169, 26);
             this.txt_sdt.TabIndex = 2;
@@ -103,7 +102,7 @@
             // 
             this.txt_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenkh.Location = new System.Drawing.Point(115, 100);
-            this.txt_tenkh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_tenkh.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tenkh.Name = "txt_tenkh";
             this.txt_tenkh.Size = new System.Drawing.Size(169, 26);
             this.txt_tenkh.TabIndex = 2;
@@ -123,7 +122,7 @@
             // 
             this.txt_makh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_makh.Location = new System.Drawing.Point(115, 56);
-            this.txt_makh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_makh.Margin = new System.Windows.Forms.Padding(2);
             this.txt_makh.Name = "txt_makh";
             this.txt_makh.Size = new System.Drawing.Size(169, 26);
             this.txt_makh.TabIndex = 2;
@@ -132,7 +131,7 @@
             // 
             this.btn_thoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.Location = new System.Drawing.Point(171, 63);
-            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(112, 39);
             this.btn_thoat.TabIndex = 6;
@@ -144,7 +143,7 @@
             // 
             this.btn_delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(4, 63);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(112, 39);
             this.btn_delete.TabIndex = 7;
@@ -156,7 +155,7 @@
             // 
             this.btn_update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Location = new System.Drawing.Point(171, 11);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(112, 39);
             this.btn_update.TabIndex = 5;
@@ -168,7 +167,7 @@
             // 
             this.btn_add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(4, 11);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(112, 39);
             this.btn_add.TabIndex = 4;
@@ -214,7 +213,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(3, 3);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 48);
             this.panel5.TabIndex = 1;
@@ -229,7 +228,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(334, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(288, 189);
             this.panel4.TabIndex = 2;
@@ -242,7 +241,7 @@
             this.panel3.Controls.Add(this.btn_update);
             this.panel3.Controls.Add(this.btn_add);
             this.panel3.Location = new System.Drawing.Point(334, 201);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(288, 115);
             this.panel3.TabIndex = 1;
@@ -253,7 +252,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(626, 323);
             this.panel1.TabIndex = 3;
@@ -264,7 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 338);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FKhachHang";
             this.Text = "FKhachHang";
             this.Load += new System.EventHandler(this.FKhachHang_Load);

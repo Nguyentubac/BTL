@@ -11,12 +11,11 @@ using System.Windows.Forms;
 namespace BTaplonVPP
 {
     public partial class FKhachHang : Form
-    {
+    {   KhachHang kh = new KhachHang();
         public FKhachHang()
         {
             InitializeComponent();
         }
-        ketnoi kncsdl = new ketnoi();
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (txt_makh.Text.Trim() == "")
@@ -37,13 +36,14 @@ namespace BTaplonVPP
                 txt_sdt.Focus();
                 return;
             }
-            if (kncsdl.TonTaiKH(txt_makh.Text.Trim()))
+            if (kh.Isvalid_KH(txt_makh.Text.Trim()))
             {
                 MessageBox.Show("Mã khách hàng đã tồn tại");
                 txt_makh.Focus();
                 return;
             }
-            //kncsdl.ThemKH(txt_makh.Text.Trim(), txt_tenkh.Text,  txt_sdt.Text);
+            
+            kh.CreateKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
             DuaDLVaoBang();
             ClearTexts();
             MessageBox.Show("Thêm thành công!");
@@ -56,19 +56,11 @@ namespace BTaplonVPP
         }
         void DuaDLVaoBang()
         {
-            //grv_dskh.DataSource = kncsdl.getAllKH();
-            //dataGridView1.DataSource = kn.getAllKhachHang();
-            //dataGridView1.DataSource = khDB.getAllKH();
+            grv_dskh.DataSource = kh.GetAllKH();
         }
-
-        private void grv_dskh_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void grv_dskh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex;//Chỉ số của hàng đang chọn
+            int i = e.RowIndex;
             if (i >= 0)
             {
                 DataGridViewRow r = new DataGridViewRow();
@@ -88,7 +80,7 @@ namespace BTaplonVPP
                 foreach (DataGridViewRow r in grv_dskh.SelectedRows)
                 {
                     string ma = r.Cells[0].Value.ToString();
-                    //kncsdl.XoaKH(ma);
+                    kh.DeleteKH(ma);
                 }
                 DuaDLVaoBang();
                 ClearTexts();
@@ -108,21 +100,21 @@ namespace BTaplonVPP
         private void btn_update_Click(object sender, EventArgs e)
         {
 
-            //if (kncsdl.TonTaiKH(txt_makh.Text.Trim()))
-            //{
-            //    kncsdl.SuaKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
-            //    DuaDLVaoBang();
-            //    ClearTexts();
-            //    MessageBox.Show("Sửa thành công!");
-            //}
-            //else
-            //{
-            //    if (MessageBox.Show("Không tồn tại khách hàng nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            //    {
-            //        btn_add_Click(sender, e);
+            if (kh.Isvalid_KH(txt_makh.Text.Trim()))
+            {
+                kh.UpdateKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
+                DuaDLVaoBang();
+                ClearTexts();
+                MessageBox.Show("Sửa thành công!");
+            }
+            else
+            {
+                if (MessageBox.Show("Không tồn tại khách hàng nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                {
+                    btn_add_Click(sender, e);
 
-            //    }
-            //}
+                }
+            }
         }
     }
 }

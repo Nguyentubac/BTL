@@ -93,5 +93,17 @@ namespace BTaplonVPP
                 MessageBox.Show("Sửa ko thành công!");
             }
         }
+        public bool Isvalid_KH(string makh)
+        {
+            string sql = "select * from tbKhachHang where MaKH=@ma";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@ma",makh)
+            };
+            if (kn.ReadData(sql, sp) != null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
