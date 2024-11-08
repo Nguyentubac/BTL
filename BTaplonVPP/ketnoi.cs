@@ -70,32 +70,6 @@ namespace BTaplonVPP
                 CloseConnection();
             }
         }
-        //Khach hang
-
-        public bool TonTaiKH(string ma)
-        {
-            bool kt = false;
-            OpenConnection();
-            string sql = "select * from tbKhachHang where MaKH=@makh";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("makh", ma);
-            SqlDataReader sdr = cmd.ExecuteReader();
-            if (sdr.HasRows) kt = true;
-            CloseConnection();
-            return kt;
-        }
-        public bool TonTaiSP(string ma)
-        {
-            bool kt = false;
-            OpenConnection();
-            string sql = "select * from tbSanPham where MaSp=@ma";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("ma", ma);
-            SqlDataReader sdr = cmd.ExecuteReader();
-            if (sdr.HasRows) kt = true;
-            CloseConnection();
-            return kt;
-        }
     }
 }
  
