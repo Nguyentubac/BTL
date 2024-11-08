@@ -69,8 +69,8 @@ namespace BTaplonVPP
         }
         void DuaDLVaoBang()
         {
-           // grv_dssp.DataSource = kncsdl.getAllKH();
-
+            grv_dssp.DataSource = sp.GetAllSP();
+           
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace BTaplonVPP
                 foreach (DataGridViewRow r in grv_dssp.SelectedRows)
                 {
                     string ma = r.Cells[0].Value.ToString();
-                   // kncsdl.XoaSP(ma);
+                   sp.DeleteSP(ma);
                 }
                 DuaDLVaoBang();
                 ClearTexts();
@@ -96,7 +96,7 @@ namespace BTaplonVPP
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (kncsdl.TonTaiSP(txt_masp.Text.Trim()))
+            if (sp.Isvalid_SP(txt_masp.Text.Trim()))
             {
 
                 sp.UpdateSP(txt_masp.Text, txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
