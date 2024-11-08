@@ -55,7 +55,7 @@ namespace BTaplonVPP
                 txt_masp.Focus();
                 return;
             }
-            kncsdl.ThemSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
+            //kncsdl.ThemSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
             DuaDLVaoBang();
             ClearTexts();
             MessageBox.Show("Thêm thành công!");
@@ -70,7 +70,7 @@ namespace BTaplonVPP
         }
         void DuaDLVaoBang()
         {
-            grv_dssp.DataSource = kncsdl.getAllKH();
+           // grv_dssp.DataSource = kncsdl.getAllKH();
 
         }
 
@@ -83,7 +83,7 @@ namespace BTaplonVPP
                 foreach (DataGridViewRow r in grv_dssp.SelectedRows)
                 {
                     string ma = r.Cells[0].Value.ToString();
-                    kncsdl.XoaSP(ma);
+                   // kncsdl.XoaSP(ma);
                 }
                 DuaDLVaoBang();
                 ClearTexts();
@@ -99,7 +99,7 @@ namespace BTaplonVPP
         {
             if (kncsdl.TonTaiSP(txt_masp.Text.Trim()))
             {
-                kncsdl.SuaSP(txt_masp.Text, txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
+                //kncsdl.SuaSP(txt_masp.Text, txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
                 DuaDLVaoBang();
                 ClearTexts();
                 MessageBox.Show("Sửa thành công!");

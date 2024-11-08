@@ -15,6 +15,7 @@ namespace BTaplonVPP
     {
         bool flagEye = true;
         ketnoi kncsdl = new ketnoi();
+        NhanSu ns  = new NhanSu();
         public FLogin()
         {
       
@@ -57,7 +58,7 @@ namespace BTaplonVPP
 
         private void button1_Click(object sender, EventArgs e)
         {   
-            if (kncsdl.TonTaiAdmin(txt_tentk.Text, txt_mk.Text))
+            if(ns.Login(txt_tentk.Text, txt_mk.Text))
             {
                 FManager fm = new FManager();
                 this.Hide();
@@ -69,7 +70,6 @@ namespace BTaplonVPP
                 MessageBox.Show("Sai mk hoặc tài khoản");
             }
 
-            
         }
 
         private void button2_Click(object sender, EventArgs e)

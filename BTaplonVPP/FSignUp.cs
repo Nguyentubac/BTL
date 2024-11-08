@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace BTaplonVPP
 {
     public partial class FSignUp : Form
-    {   ketnoi knscdl = new ketnoi();
+    {   
+        NhanSu ns = new NhanSu();
         public FSignUp()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace BTaplonVPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (knscdl.TonTaiNS(txtMaNs.Text)){
+            if (ns.Isvalid_NS(txtMaNs.Text)){
                 MessageBox.Show("Đã Tồn Tại mã Nhân sự");
             }
             else if (MessageBox.Show("Bạn phải xác nhận quyền admin", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)

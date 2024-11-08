@@ -68,12 +68,12 @@ namespace BTaplonVPP
                 dtp_nansinh.Focus();
                 return false;
             }
-            if (kncsdl.TonTaiNS(txt_manv.Text.Trim()))
-            {
-                MessageBox.Show("Mã nhân viên đã tồn tại");
-                txt_manv.Focus();
-                return false;
-            }
+            //if (kncsdl.TonTaiNS(txt_manv.Text.Trim()))
+            //{
+            //    MessageBox.Show("Mã nhân viên đã tồn tại");
+            //    txt_manv.Focus();
+            //    return false;
+            //}
             return true;
         }
 
@@ -96,22 +96,22 @@ namespace BTaplonVPP
         {
             if (checkNS())
             {
-                if (kncsdl.TonTaiNS(txt_manv.Text.Trim()))
-                {
-                    kncsdl.SuaNS(txt_manv.Text, txt_tennv.Text, txt_sdt.Text, txt_diachi.Text, dtp_nansinh.Text);
-                    DuaDLVaoBang();
-                    ClearTexts();
-                    MessageBox.Show("Sửa thành công!");
-                }
-                else
-                {
-                    if (MessageBox.Show("Không tồn tại nhân sự nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-                    {
-                        FSignUp fSignUp = new FSignUp();
-                        fSignUp.ShowDialog();
-                        this.Close();
-                    }
-                }
+                //if (kncsdl.TonTaiNS(txt_manv.Text.Trim()))
+                //{
+                //    kncsdl.SuaNS(txt_manv.Text, txt_tennv.Text, txt_sdt.Text, txt_diachi.Text, dtp_nansinh.Text);
+                //    DuaDLVaoBang();
+                //    ClearTexts();
+                //    MessageBox.Show("Sửa thành công!");
+                //}
+                //else
+                //{
+                //    if (MessageBox.Show("Không tồn tại nhân sự nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                //    {
+                //        FSignUp fSignUp = new FSignUp();
+                //        fSignUp.ShowDialog();
+                //        this.Close();
+                //    }
+                //}
             }
             
         }
@@ -124,7 +124,7 @@ namespace BTaplonVPP
                 foreach (DataGridViewRow r in grv_dsnv.SelectedRows)
                 {
                     string ma = r.Cells[0].Value.ToString();
-                    kncsdl.XoaNS(ma);
+                    //kncsdl.XoaNS(ma);
                 }
                 DuaDLVaoBang();
                 ClearTexts();

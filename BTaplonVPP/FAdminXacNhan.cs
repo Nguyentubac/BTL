@@ -14,10 +14,11 @@ namespace BTaplonVPP
     {
         ketnoi kncsdl = new ketnoi();
         FSignUp fSignUp = new FSignUp();
-        string a;
-        string b;
-        string c;
-        string d;
+        public string a;
+        public string b;
+        public string c;
+        public string d;
+        NhanSu ns = new NhanSu();
         public FAdminXacNhan(string a, string b, string c , string d)
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace BTaplonVPP
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (kncsdl.TonTaiAdmin(txt_tentk.Text, txt_mk.Text))
+            if (ns.Login(txt_tentk.Text, txt_mk.Text))
             {
-                kncsdl.ThemAdmin(a, b, c, d);
+                ns.CreateNS(a, b, c, d);
                 this.Close();
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
                 FStaffManager fStaffManager = new FStaffManager();

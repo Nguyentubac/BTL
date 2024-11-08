@@ -43,7 +43,7 @@ namespace BTaplonVPP
                 txt_makh.Focus();
                 return;
             }
-            kncsdl.ThemKH(txt_makh.Text.Trim(), txt_tenkh.Text,  txt_sdt.Text);
+            //kncsdl.ThemKH(txt_makh.Text.Trim(), txt_tenkh.Text,  txt_sdt.Text);
             DuaDLVaoBang();
             ClearTexts();
             MessageBox.Show("Thêm thành công!");
@@ -56,7 +56,7 @@ namespace BTaplonVPP
         }
         void DuaDLVaoBang()
         {
-            grv_dskh.DataSource = kncsdl.getAllKH();
+            //grv_dskh.DataSource = kncsdl.getAllKH();
             //dataGridView1.DataSource = kn.getAllKhachHang();
             //dataGridView1.DataSource = khDB.getAllKH();
         }
@@ -88,7 +88,7 @@ namespace BTaplonVPP
                 foreach (DataGridViewRow r in grv_dskh.SelectedRows)
                 {
                     string ma = r.Cells[0].Value.ToString();
-                    kncsdl.XoaKH(ma);
+                    //kncsdl.XoaKH(ma);
                 }
                 DuaDLVaoBang();
                 ClearTexts();
@@ -108,21 +108,21 @@ namespace BTaplonVPP
         private void btn_update_Click(object sender, EventArgs e)
         {
 
-            if (kncsdl.TonTaiKH(txt_makh.Text.Trim()))
-            {
-                kncsdl.SuaKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
-                DuaDLVaoBang();
-                ClearTexts();
-                MessageBox.Show("Sửa thành công!");
-            }
-            else
-            {
-                if (MessageBox.Show("Không tồn tại khách hàng nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-                {
-                    btn_add_Click(sender, e);
+            //if (kncsdl.TonTaiKH(txt_makh.Text.Trim()))
+            //{
+            //    kncsdl.SuaKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
+            //    DuaDLVaoBang();
+            //    ClearTexts();
+            //    MessageBox.Show("Sửa thành công!");
+            //}
+            //else
+            //{
+            //    if (MessageBox.Show("Không tồn tại khách hàng nào có mã như vậy, có muốn thêm không?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            //    {
+            //        btn_add_Click(sender, e);
 
-                }
-            }
+            //    }
+            //}
         }
     }
 }
