@@ -100,11 +100,11 @@ namespace BTaplonVPP
                 MessageBox.Show("Thêm ko thành công!");
             }
         }
-        public void DeleteNCC(string mancc)
+        public void DeleteNS(string mans)
         {
-            string sql = "delete tbNhaCungCap where MaNCC = @mancc";
+            string sql = "delete tbNhanSu where MaNS = @mans";
             SqlParameter[] sp = new SqlParameter[] {
-            new SqlParameter("@mancc",mancc)
+            new SqlParameter("@mans",mans)
             };
             kn.CreateUpdateDelete(sql, sp);
         }

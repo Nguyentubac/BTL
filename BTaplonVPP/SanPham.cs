@@ -15,7 +15,7 @@ namespace BTaplonVPP
         public SanPham() { 
             kn = new ketnoi();
         }
-        bool check(string masp, string tensp, string sluong, string dgia, string loaisp)
+        bool check(string masp, string tensp, string sluong, float dgia, string loaisp)
         {
             if (masp == "")
             {
@@ -35,9 +35,9 @@ namespace BTaplonVPP
                 
                 return false;
             }
-            if (dgia== "")
+            if (dgia < 0)
             {
-                MessageBox.Show("Chưa nhập đơn giá!");
+                MessageBox.Show("Giá chưa hợp lệ !");
                 
                 return false;
             }
@@ -61,7 +61,7 @@ namespace BTaplonVPP
             };
             return kn.ReadData(sql, sp);
         }
-        private void CreateSP(string masp, string tensp, string sluong, string dgia, string loaisp)
+        public void CreateSP(string masp, string tensp, string sluong, float dgia, string loaisp)
         {
             if (check(masp, tensp, sluong, dgia, loaisp))
             {
@@ -84,7 +84,7 @@ namespace BTaplonVPP
                
             
         }
-        private void UpdateSP(string masp, string tensp, string sluong, string dgia, string loaisp)
+        public void UpdateSP(string masp, string tensp, string sluong, float dgia, string loaisp)
         {
             if (check(masp, tensp, sluong, dgia, loaisp))
             {

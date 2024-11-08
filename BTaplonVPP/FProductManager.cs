@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BTaplonVPP
 {
     public partial class FProductManager : Form
-    {
+    {   SanPham sp = new SanPham();
         public FProductManager()
         {
             InitializeComponent();
@@ -49,14 +49,13 @@ namespace BTaplonVPP
                 txt_loaisp.Focus();
                 return;
             }
-            if (kncsdl.TonTaiSP(txt_masp.Text.Trim()))
+            if (sp.Isvalid_SP(txt_masp.Text.Trim()))
             {
                 MessageBox.Show("Mã sản phẩm đã tồn tại");
                 txt_masp.Focus();
                 return;
             }
-            //kncsdl.ThemSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
-            DuaDLVaoBang();
+            sp.CreateSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
             ClearTexts();
             MessageBox.Show("Thêm thành công!");
         }
@@ -99,7 +98,8 @@ namespace BTaplonVPP
         {
             if (kncsdl.TonTaiSP(txt_masp.Text.Trim()))
             {
-                //kncsdl.SuaSP(txt_masp.Text, txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
+
+                sp.UpdateSP(txt_masp.Text, txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
                 DuaDLVaoBang();
                 ClearTexts();
                 MessageBox.Show("Sửa thành công!");
