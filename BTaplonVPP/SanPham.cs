@@ -125,5 +125,18 @@ namespace BTaplonVPP
             }
             return false;
         }
+        public DataTable GetHD(string masp)
+        {
+            string sql = "select Ma from tbSanPham";
+            return kn.ReadData(sql);
+        }
+        public DataTable GetTimKiem(string tentk)
+        {
+            string sql = "select * from tbSanPham where LoaiSanPham = @lsp";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@lsp",tentk)
+            };
+            return kn.ReadData(sql, sp);
+        }
     }
 }

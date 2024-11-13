@@ -112,6 +112,8 @@
     <Compile Include="FStaffManager.Designer.cs">
       <DependentUpon>FStaffManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDonBan.cs" />
+    <Compile Include="HoaDonNhap.cs" />
     <Compile Include="ketnoi.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="NhaCungCap.cs" />

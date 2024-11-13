@@ -62,7 +62,7 @@ namespace BTaplonVPP
             SqlParameter[] sp = new SqlParameter[] {
             new SqlParameter("@ma",mans)
             };
-            if (kn.ReadData(sql, sp) != null)
+            if (kn.ReadData(sql, sp).Rows.Count > 0)
             {
                 return true;
             }
@@ -70,12 +70,12 @@ namespace BTaplonVPP
         }
         public bool Login(string tk, string mk )
         {
-            string sql = "select * from tbNhanSu where TenTaiKhoan=@tk and MatKhau = @mk ";
+            string sql = "select * from tbNhanSu where TenTaiKhoan= @tk and MatKhau = @mk ";
             SqlParameter[] sp = new SqlParameter[] {
             new SqlParameter("@tk",tk),
             new SqlParameter("@mk",mk)
             };
-            if(kn.ReadData(sql, sp) != null)
+            if(kn.ReadData(sql, sp).Rows.Count > 0)
             {
                 return true;
             }
@@ -109,9 +109,10 @@ namespace BTaplonVPP
             kn.CreateUpdateDelete(sql, sp);
         }
         public void UpdateNS(string ma, string ten, string namsinh, string sdt, string diachi)
-        {
+        {   
+            string tuoi = (2025 - int.Parse(namsinh)).ToString();
             string sql = "UPDATE tbNhanSu SET Ten = @ten, SDT = @sdt,DiaChi = @diachi, NamSinh = @namsinh " +
-            " WHEREMaNs = @mans;";
+            " WHERE MaNs = @mans;";
             SqlParameter[] sp = new SqlParameter[] {
                     new SqlParameter("@mans", ma),
                     new SqlParameter("@ten", ten),

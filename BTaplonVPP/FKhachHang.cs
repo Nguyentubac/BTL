@@ -36,17 +36,18 @@ namespace BTaplonVPP
                 txt_sdt.Focus();
                 return;
             }
-            if (kh.Isvalid_KH(txt_makh.Text.Trim()))
+            if (!kh.Isvalid_KH(txt_makh.Text.Trim()))
             {
                 MessageBox.Show("Mã khách hàng đã tồn tại");
                 txt_makh.Focus();
                 return;
             }
-            
-            kh.CreateKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
-            DuaDLVaoBang();
-            ClearTexts();
-            MessageBox.Show("Thêm thành công!");
+            else
+            {
+                kh.CreateKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
+                DuaDLVaoBang();
+                ClearTexts();
+            }
         }
         void ClearTexts()
         {
@@ -65,7 +66,7 @@ namespace BTaplonVPP
             {
                 DataGridViewRow r = new DataGridViewRow();
                 r = grv_dskh.Rows[i];
-                txt_makh.Text = r.Cells[0].Value.ToString();
+                txt_makh.Text = r.Cells[0].Value.ToString().Trim();
                 txt_tenkh.Text = r.Cells[1].Value.ToString();
                 txt_sdt.Text = r.Cells[2].Value.ToString();
             }
@@ -100,7 +101,7 @@ namespace BTaplonVPP
         private void btn_update_Click(object sender, EventArgs e)
         {
 
-            if (kh.Isvalid_KH(txt_makh.Text.Trim()))
+            if (!kh.Isvalid_KH(txt_makh.Text.Trim()))
             {
                 kh.UpdateKH(txt_makh.Text, txt_tenkh.Text, txt_sdt.Text);
                 DuaDLVaoBang();

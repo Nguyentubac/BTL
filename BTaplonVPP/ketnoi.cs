@@ -12,6 +12,7 @@ namespace BTaplonVPP
 {///
     internal class ketnoi
     {
+        public string mans = "";
         SqlConnection conn;
 
         public void OpenConnection()

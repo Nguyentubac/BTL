@@ -69,12 +69,6 @@ namespace BTaplonVPP
                 dtp_nansinh.Focus();
                 return false;
             }
-            if (ns.Isvalid_NS(txt_manv.Text.Trim()))
-            {
-                MessageBox.Show("Mã nhân viên đã tồn tại");
-                txt_manv.Focus();
-                return false;
-            }
             return true;
         }
 
