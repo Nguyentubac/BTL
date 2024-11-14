@@ -122,5 +122,23 @@ namespace BTaplonVPP
                 };
             kn.CreateUpdateDelete(sql, sp);
         }
+        public string getMans(string tk, string mk)
+        {
+            DataTable dataTable = new DataTable();
+            string mans = "";
+            string sql = "select MaNs from tbNhanSu where TenTaiKhoan= @tk and MatKhau = @mk ";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@tk",tk),
+            new SqlParameter("@mk",mk),
+            
+            }; 
+            dataTable = kn.ReadData(sql, sp);
+            if (dataTable.Rows.Count > 0)
+            {
+                DataRow r = dataTable.Rows[0];
+                mans = r["MaNs"].ToString(); // Lấy giá trị từ cột MaNs
+            }
+            return mans;
+        }
     }
 }

@@ -42,7 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttontt = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menus_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -234,7 +234,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.numericUpDown2);
             this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.buttontt);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(464, 385);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
@@ -268,17 +268,17 @@
             this.button4.Text = "In hóa đơn";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttontt
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(109, 9);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 47);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Thanh toán";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.buttontt.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttontt.Location = new System.Drawing.Point(109, 9);
+            this.buttontt.Margin = new System.Windows.Forms.Padding(2);
+            this.buttontt.Name = "buttontt";
+            this.buttontt.Size = new System.Drawing.Size(130, 47);
+            this.buttontt.TabIndex = 5;
+            this.buttontt.Text = "Thanh toán";
+            this.buttontt.UseVisualStyleBackColor = true;
+            this.buttontt.Click += new System.EventHandler(this.buttontt_Click);
             // 
             // menuStrip1
             // 
@@ -587,7 +587,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttontt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.Label label4;

@@ -57,7 +57,8 @@ namespace BTaplonVPP
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
+        {
+            kncsdl.mans = ns.getMans(txt_tentk.Text, txt_mk.Text);
             if(ns.Login(txt_tentk.Text, txt_mk.Text))
             {
                 FManager fm = new FManager();

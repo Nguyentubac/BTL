@@ -10,10 +10,13 @@ using System.Windows.Forms;
 
 namespace BTaplonVPP
 {
+    
     public partial class FManager : Form
     {
         DataTable dataTable = new DataTable();
         SanPham sp = new SanPham();
+        ketnoi kn = new ketnoi();
+        HoaDonBan hdb = new HoaDonBan();
         float tong = 0;
         public FManager()
         {
@@ -258,6 +261,29 @@ namespace BTaplonVPP
             }
             else
             UpdateTotal();
+        }
+
+        private void buttontt_Click(object sender, EventArgs e)
+        {
+            
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    
+                    string MNS = kn.mans;
+                    string MKH = "";
+                    string MSP = row.Cells["MaSP"].Value.ToString(); 
+                    string TSP = row.Cells["TenSP"].Value.ToString(); 
+                    int SL = int.Parse(row.Cells["SoLuong"].Value.ToString()); 
+                    float DG =float.Parse(row.Cells["DonGia"].Value.ToString());
+                    float GG = float.Parse(numericUpDown2.Value.ToString());
+                    float tongtien = tong;
+
+                    
+                    hdb.AddInvoice(tongtien,MNS,MKH, MSP,TSP, SL, DG, GG);
+                }
+            }
         }
     }
 }

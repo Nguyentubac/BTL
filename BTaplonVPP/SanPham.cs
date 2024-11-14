@@ -65,7 +65,7 @@ namespace BTaplonVPP
         {
             if (check(masp, tensp, sluong, dgia, loaisp))
             {
-                string sql = "INSERT INTO tbSanPham (ma, ten, sl, dg, loai) VALUES (@ma, @ten, @sl, @dg, @loai)";
+                string sql = "INSERT INTO tbSanPham (MaSp, TenSp, SoLuong, DonGia, LoaiSanPham) VALUES (@ma, @ten, @sl, @dg, @loai)";
                 SqlParameter[] parameters = new SqlParameter[]
                 {
                     new SqlParameter("@ma", masp),
@@ -88,7 +88,7 @@ namespace BTaplonVPP
         {
             if (check(masp, tensp, sluong, dgia, loaisp))
             {
-                string sql = "UPDATE tbSanPham SET TenSP = @ten, SoLuong = @sl, DonGia = @dg, Loai = @loai WHERE MaSp = @ma";
+                string sql = "UPDATE tbSanPham SET TenSP = @ten, SoLuong = @sl, DonGia = @dg, LoaiSanPham = @loai WHERE MaSp = @ma";
                 SqlParameter[] parameters = new SqlParameter[]
                 {
                     new SqlParameter("@ma", masp),
