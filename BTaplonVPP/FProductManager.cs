@@ -49,15 +49,18 @@ namespace BTaplonVPP
                 txt_loaisp.Focus();
                 return;
             }
-            if (sp.Isvalid_SP(txt_masp.Text.Trim()))
+            if (!sp.Isvalid_SP(txt_masp.Text))
             {
-                MessageBox.Show("Mã sản phẩm đã tồn tại");
-                txt_masp.Focus();
-                return;
+                MessageBox.Show("Sản phẩm này đã tồn tại", "Thông báo");
             }
-            sp.CreateSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
-            ClearTexts();
-            MessageBox.Show("Thêm thành công!");
+            else
+            {
+                sp.CreateSP(txt_masp.Text.Trim(), txt_tensp.Text, txt_loaisp.Text, float.Parse(txt_dgia.Text), txt_sluong.Text);
+                ClearTexts();
+                DuaDLVaoBang();
+                MessageBox.Show("Thêm thành công!");
+            }
+            
         }
         void ClearTexts()
         {
@@ -126,11 +129,11 @@ namespace BTaplonVPP
             {
                 DataGridViewRow r = new DataGridViewRow();
                 r = grv_dssp.Rows[i];
-                txt_masp.Text = r.Cells[0].Value.ToString();
-                txt_tensp.Text = r.Cells[1].Value.ToString();
-                txt_loaisp.Text = r.Cells[2].Value.ToString();
-                txt_sluong.Text = r.Cells[3].Value.ToString();
-                txt_dgia.Text = r.Cells[4].Value.ToString();
+                txt_masp.Text = r.Cells["MaSp"].Value.ToString().Trim();
+                txt_tensp.Text = r.Cells["TenSp"].Value.ToString().Trim();
+                txt_loaisp.Text = r.Cells["LoaiSanPham"].Value.ToString().Trim();
+                txt_dgia.Text = r.Cells["DonGia"].Value.ToString().Trim();
+                txt_sluong.Text = r.Cells["SoLuong"].Value.ToString().Trim();
             }
         }
     }

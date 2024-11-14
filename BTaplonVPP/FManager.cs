@@ -19,6 +19,7 @@ namespace BTaplonVPP
         SanPham sp = new SanPham();
         ketnoi kn = new ketnoi();
         HoaDonBan hdb = new HoaDonBan();
+        public string quyenht;
         public float Tong { get; set; } = 0; // Tổng tiền
         public string MNS { get; set; } 
         public int SL { get; set; } // Số lượng
@@ -28,11 +29,12 @@ namespace BTaplonVPP
         public float TongTien { get; set; } // Tổng tiền
         public string TSP { get; set; } // Tên sản phẩm
         public float GG { get; set; }
-        public FManager(string mans)
+        public FManager(string mans, string quyen)
         {
             InitializeComponent();
             UpdateTotal();
             MNS = mans;
+            quyenht = quyen;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,12 +54,18 @@ namespace BTaplonVPP
 
         private void FManager_Load(object sender, EventArgs e)
         {
+
             dataGridView1.DataSource = sp.GetAllSP();
             foreach (DataGridViewColumn column in dataGridView1.Columns)
             {
                 dataTable.Columns.Add(column.Name, column.ValueType);
             }
             txt_mns.Text = MNS;
+            if(quyenht == "staff")
+            {
+                enableNV();
+            }
+            
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,7 +75,7 @@ namespace BTaplonVPP
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FProfile fProfile = new FProfile();
+            FProfile fProfile = new FProfile(MNS);
             fProfile.ShowDialog();
         }
 
@@ -273,22 +281,32 @@ namespace BTaplonVPP
 
         private void buttontt_Click(object sender, EventArgs e)
         {
-            
-            foreach (DataGridViewRow row in dataGridView2.Rows)
+            if (dataGridView2.DataSource == null)
             {
-                if (!row.IsNewRow)
+                MessageBox.Show("Hãy chọn sản phẩm", "Thông báo");
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
-                    
-                    string MKH = "KH001";
-                    MSP = row.Cells["MaSP"].Value.ToString(); 
-                    TSP = row.Cells["TenSP"].Value.ToString(); 
-                    SL = int.Parse(row.Cells["SoLuong"].Value.ToString()); 
-                    DG =float.Parse(row.Cells["DonGia"].Value.ToString());
-                    GG = float.Parse(numericUpDown2.Value.ToString());
-                    float tongtien = Tong;
+                    if (!row.IsNewRow)
+                    {
 
-                    hdb.AddInvoice(tongtien,MNS,MKH, MSP,TSP, SL, DG, GG);
+                        string MKH = "KH001";
+                        MSP = row.Cells["MaSP"].Value.ToString();
+                        TSP = row.Cells["TenSP"].Value.ToString();
+                        SL = int.Parse(row.Cells["SoLuong"].Value.ToString());
+                        DG = float.Parse(row.Cells["DonGia"].Value.ToString());
+                        GG = float.Parse(numericUpDown2.Value.ToString());
+                        float tongtien = Tong;
+
+                        hdb.AddInvoice(tongtien, MNS, MKH, MSP, TSP, SL, DG, GG);
+                        sp.UpdateSPM(MSP, SL);
+                        dataGridView1.DataSource = sp.GetAllSP();
+                    }
                 }
+                MessageBox.Show("Thêm sản phẩm thành công!");
+                dataGridView2.DataSource = null;
             }
         }
 
@@ -386,6 +404,24 @@ namespace BTaplonVPP
             GC.WaitForPendingFinalizers();
         
         
+        }
+
+        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FProductManager fProductManager = new FProductManager();
+            fProductManager.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void enableNV()
+        {
+            quảnLýNhânViênToolStripMenuItem.Enabled = false;
+            xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Enabled = false;
+            xuấtExcelDanhSáchNhânViênToolStripMenuItem.Enabled = false;
+            xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Enabled = false;
         }
     }
 }

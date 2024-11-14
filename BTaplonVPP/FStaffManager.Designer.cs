@@ -67,6 +67,7 @@
             this.grv_dsnv.Name = "grv_dsnv";
             this.grv_dsnv.RowHeadersWidth = 51;
             this.grv_dsnv.RowTemplate.Height = 24;
+            this.grv_dsnv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grv_dsnv.Size = new System.Drawing.Size(321, 347);
             this.grv_dsnv.TabIndex = 0;
             this.grv_dsnv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dsnv_CellClick);

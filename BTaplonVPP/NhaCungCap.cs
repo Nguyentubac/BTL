@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -44,11 +45,16 @@ namespace BTaplonVPP
             }
             return true;
         }
-        private void CreateNCC(string mancc, string tenncc, string sdt, string diachi, string maspcc)
+        public DataTable GetAllNCC()
+        {
+            string sql = "select * from tbNhaCungCap";
+            return kn.ReadData(sql);
+        }
+        public void CreateNCC(string mancc, string tenncc, string sdt, string diachi, string maspcc)
         {
             if (check(mancc,tenncc,sdt,diachi,maspcc))
             {
-                string sql = "\"insert into tbNhaCungCap values(@mancc,@tenncc,@sdt,@diachi,@maspcc)";
+                string sql = "insert into tbNhaCungCap values(@mancc,@tenncc,@sdt,@diachi,@maspcc)";
                 SqlParameter[] sp = new SqlParameter[] {
                 new SqlParameter("@mancc", mancc),
                 new SqlParameter("@tenncc", tenncc),
@@ -65,6 +71,7 @@ namespace BTaplonVPP
             }
 
         }
+
         public void DeleteNCC(string mancc)
         {
             string sql = "delete tbNhaCungCap where MaNCC = @mancc";

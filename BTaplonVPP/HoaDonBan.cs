@@ -19,7 +19,7 @@ namespace BTaplonVPP
         }
         public DataTable GetCTHD(string ma)
         {
-            string sql = "select MaNs, MaKH, MaSP,TenSP,SoLuong,DonGia from tbChiTietHoaDonNhap Where MaHDN = @ma";
+            string sql = "select MaNs, MaKH, MaSp,TenSp,SoLuong,DonGia,GiamGia from tbChiTietHoaDonBan Where MaHDB = @ma";
             SqlParameter[] hdn = new SqlParameter[] {
             new SqlParameter("@ma",ma)
             };
@@ -41,7 +41,7 @@ namespace BTaplonVPP
             try
             {
                 kn.CreateUpdateDelete(sql, parameters);
-                MessageBox.Show("Thêm hóa đơn thành công!");
+                //MessageBox.Show("Thêm hóa đơn thành công!");
             }
             catch (Exception ex)
             {
@@ -71,7 +71,7 @@ namespace BTaplonVPP
             try
             {
                 kn.CreateUpdateDelete(sql, parameters);
-                MessageBox.Show("Thêm chi tiết hóa đơn thành công!");
+                //MessageBox.Show("Thêm chi tiết hóa đơn thành công!");
             }
             catch (Exception ex)
             {

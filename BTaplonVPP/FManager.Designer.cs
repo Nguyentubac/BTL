@@ -50,7 +50,6 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtExcelDanhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,18 +59,16 @@
             this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.danhSáchKháchHômNayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xuấtExcelDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hỗTrợToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hướngDẫnSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCửaHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_mns = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_mns = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nsl)).BeginInit();
             this.panel3.SuspendLayout();
@@ -94,7 +91,7 @@
             this.panel2.Controls.Add(this.cbb_loai);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(464, 25);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(381, 50);
             this.panel2.TabIndex = 1;
@@ -123,7 +120,7 @@
             // 
             this.nsl.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nsl.Location = new System.Drawing.Point(160, 24);
-            this.nsl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nsl.Margin = new System.Windows.Forms.Padding(2);
             this.nsl.Minimum = new decimal(new int[] {
             100,
             0,
@@ -143,7 +140,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(271, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(52, 44);
             this.button5.TabIndex = 5;
@@ -155,7 +152,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(327, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 44);
             this.button1.TabIndex = 1;
@@ -180,7 +177,7 @@
             "Đồ Dùng Cho Không Gian Làm Việc",
             "Các Sản Phẩm Khác"});
             this.cbb_loai.Location = new System.Drawing.Point(4, 24);
-            this.cbb_loai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_loai.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_loai.Name = "cbb_loai";
             this.cbb_loai.Size = new System.Drawing.Size(140, 24);
             this.cbb_loai.TabIndex = 0;
@@ -193,7 +190,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(464, 80);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(381, 300);
             this.panel3.TabIndex = 2;
@@ -216,7 +213,7 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(118, 270);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(197, 24);
             this.textBox1.TabIndex = 2;
@@ -233,13 +230,15 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txt_mns);
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.numericUpDown2);
             this.panel4.Controls.Add(this.btn_In_hoa_don);
             this.panel4.Controls.Add(this.buttontt);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(464, 385);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(379, 64);
             this.panel4.TabIndex = 3;
@@ -252,12 +251,13 @@
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Giảm giá";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.Location = new System.Drawing.Point(6, 32);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             100,
             0,
@@ -271,10 +271,10 @@
             // btn_In_hoa_don
             // 
             this.btn_In_hoa_don.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_In_hoa_don.Location = new System.Drawing.Point(247, 9);
-            this.btn_In_hoa_don.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_In_hoa_don.Location = new System.Drawing.Point(277, 9);
+            this.btn_In_hoa_don.Margin = new System.Windows.Forms.Padding(2);
             this.btn_In_hoa_don.Name = "btn_In_hoa_don";
-            this.btn_In_hoa_don.Size = new System.Drawing.Size(130, 47);
+            this.btn_In_hoa_don.Size = new System.Drawing.Size(100, 47);
             this.btn_In_hoa_don.TabIndex = 4;
             this.btn_In_hoa_don.Text = "In hóa đơn";
             this.btn_In_hoa_don.UseVisualStyleBackColor = true;
@@ -283,10 +283,10 @@
             // buttontt
             // 
             this.buttontt.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttontt.Location = new System.Drawing.Point(109, 9);
-            this.buttontt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttontt.Location = new System.Drawing.Point(173, 9);
+            this.buttontt.Margin = new System.Windows.Forms.Padding(2);
             this.buttontt.Name = "buttontt";
-            this.buttontt.Size = new System.Drawing.Size(130, 47);
+            this.buttontt.Size = new System.Drawing.Size(100, 47);
             this.buttontt.TabIndex = 5;
             this.buttontt.Text = "Thanh toán";
             this.buttontt.UseVisualStyleBackColor = true;
@@ -303,12 +303,11 @@
             this.quảnLýHóaĐơnToolStripMenuItem,
             this.thôngTinKháchHàngToolStripMenuItem,
             this.thôngTinNhàCungCấpToolStripMenuItem,
-            this.báoCáoToolStripMenuItem,
             this.hỗTrợToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(854, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(856, 25);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -351,12 +350,7 @@
             this.quảnLýSảnPhẩmToolStripMenuItem.Name = "quảnLýSảnPhẩmToolStripMenuItem";
             this.quảnLýSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.quảnLýSảnPhẩmToolStripMenuItem.Text = "Quản lý sản phẩm";
-            // 
-            // xuấtExelDanhSáchSảnPhẩmToolStripMenuItem
-            // 
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Name = "xuấtExelDanhSáchSảnPhẩmToolStripMenuItem";
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Text = "Xuất excel danh sách sản phẩm";
+            this.quảnLýSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSảnPhẩmToolStripMenuItem_Click);
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
@@ -425,34 +419,6 @@
             this.thôngTinNhàCungCấpToolStripMenuItem.Text = "Thông tin nhà cung cấp";
             this.thôngTinNhàCungCấpToolStripMenuItem.Click += new System.EventHandler(this.thôngTinNhàCungCấpToolStripMenuItem_Click);
             // 
-            // báoCáoToolStripMenuItem
-            // 
-            this.báoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchKháchHômNayToolStripMenuItem,
-            this.báoCáoNhânViênToolStripMenuItem,
-            this.xuấtExcelDoanhThuToolStripMenuItem});
-            this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(69, 21);
-            this.báoCáoToolStripMenuItem.Text = "Báo cáo";
-            // 
-            // danhSáchKháchHômNayToolStripMenuItem
-            // 
-            this.danhSáchKháchHômNayToolStripMenuItem.Name = "danhSáchKháchHômNayToolStripMenuItem";
-            this.danhSáchKháchHômNayToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.danhSáchKháchHômNayToolStripMenuItem.Text = "Excel Danh sách khách hôm nay";
-            // 
-            // báoCáoNhânViênToolStripMenuItem
-            // 
-            this.báoCáoNhânViênToolStripMenuItem.Name = "báoCáoNhânViênToolStripMenuItem";
-            this.báoCáoNhânViênToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.báoCáoNhânViênToolStripMenuItem.Text = "Excel bảng chấm công nhân viên";
-            // 
-            // xuấtExcelDoanhThuToolStripMenuItem
-            // 
-            this.xuấtExcelDoanhThuToolStripMenuItem.Name = "xuấtExcelDoanhThuToolStripMenuItem";
-            this.xuấtExcelDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.xuấtExcelDoanhThuToolStripMenuItem.Text = "Excel doanh thu";
-            // 
             // hỗTrợToolStripMenuItem
             // 
             this.hỗTrợToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -480,7 +446,7 @@
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 25);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(452, 424);
             this.flowLayoutPanel1.TabIndex = 5;
@@ -489,13 +455,20 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txt_mns);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // txt_mns
+            // 
+            this.txt_mns.Enabled = false;
+            this.txt_mns.Location = new System.Drawing.Point(72, 31);
+            this.txt_mns.Name = "txt_mns";
+            this.txt_mns.Size = new System.Drawing.Size(96, 24);
+            this.txt_mns.TabIndex = 1;
             // 
             // label4
             // 
@@ -512,7 +485,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -521,26 +494,34 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txt_mns
+            // label6
             // 
-            this.txt_mns.Enabled = false;
-            this.txt_mns.Location = new System.Drawing.Point(296, 3);
-            this.txt_mns.Name = "txt_mns";
-            this.txt_mns.Size = new System.Drawing.Size(147, 24);
-            this.txt_mns.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(72, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Mã nhân sự";
+            this.label6.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // xuấtExelDanhSáchSảnPhẩmToolStripMenuItem
+            // 
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Name = "xuấtExelDanhSáchSảnPhẩmToolStripMenuItem";
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Text = "Xuất excel danh sách sản phẩm";
             // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 458);
+            this.ClientSize = new System.Drawing.Size(856, 458);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FManager";
             this.Text = "Quản Lý Cửa Hàng Văn Phòng Phẩm";
             this.Load += new System.EventHandler(this.FManager_Load);
@@ -580,16 +561,11 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnNhậpToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem danhSáchKháchHômNayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hỗTrợToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýSảnPhẩmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xuấtExelDanhSáchSảnPhẩmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem xuấtExcelDanhSáchNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuấtExcelDanhSáchHóaĐơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xuấtExcelDoanhThuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCửaHàngToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -609,5 +585,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_mns;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem xuấtExelDanhSáchSảnPhẩmToolStripMenuItem;
     }
 }

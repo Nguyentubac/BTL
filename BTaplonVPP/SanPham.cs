@@ -75,7 +75,7 @@ namespace BTaplonVPP
                     new SqlParameter("@loai", loaisp)
                 };
                 kn.CreateUpdateDelete(sql, parameters);
-                MessageBox.Show("Thêm thành công!");
+                
             }
             else
             {
@@ -138,5 +138,18 @@ namespace BTaplonVPP
             };
             return kn.ReadData(sql, sp);
         }
-    }
+        public void UpdateSPM(string masp, int sluong)
+        {
+            
+                string sql = "UPDATE tbSanPham SET SoLuong = Soluong - @sl WHERE MaSp = @ma";
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@ma", masp),
+                    new SqlParameter("@sl", sluong)
+                };
+                kn.CreateUpdateDelete(sql, parameters);
+                MessageBox.Show("Sửa thành công!");
+         }
+            
+        }
 }

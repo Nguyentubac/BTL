@@ -81,9 +81,9 @@ namespace BTaplonVPP
                 r = grv_dsnv.Rows[i];
                 txt_manv.Text = r.Cells[0].Value.ToString();
                 txt_tennv.Text = r.Cells[1].Value.ToString();
-                txt_sdt.Text = r.Cells[2].Value.ToString();
-                txt_diachi.Text = r.Cells[3].Value.ToString();
-                dtp_nansinh.Text = r.Cells[4].Value.ToString();
+                txt_sdt.Text = r.Cells[3].Value.ToString();
+                txt_diachi.Text = r.Cells[4].Value.ToString();
+                dtp_nansinh.Value = DateTime.Parse(r.Cells[5].Value.ToString());
             }
         }
 

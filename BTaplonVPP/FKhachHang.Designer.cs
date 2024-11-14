@@ -62,6 +62,7 @@
             this.grv_dskh.Name = "grv_dskh";
             this.grv_dskh.RowHeadersWidth = 51;
             this.grv_dskh.RowTemplate.Height = 24;
+            this.grv_dskh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grv_dskh.Size = new System.Drawing.Size(321, 250);
             this.grv_dskh.TabIndex = 0;
             this.grv_dskh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dskh_CellClick);

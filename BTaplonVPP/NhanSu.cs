@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace BTaplonVPP
 {
@@ -18,21 +11,42 @@ namespace BTaplonVPP
         {
             kn = new ketnoi();
         }
-        bool check(string mans, string tentk, string mk, string quyen)
+        bool check(string mans, string tenns, string dc, string sdt, string namsinh,string tentk, string mk, string quyen)
         {
             if (mans == "")
             {
                 MessageBox.Show("Chưa nhập mã!");
                 return false;
             }
+            
+            if (tenns == "")
+            {
+                MessageBox.Show("Chưa nhập tên!");
+                return false;
+            }
+            if (dc == "")
+            {
+                MessageBox.Show("Chưa nhập địa chỉ!");
+                return false;
+            }
+            if (sdt == "")
+            {
+                MessageBox.Show("Chưa nhập số điện thoại!");
+                return false;
+            }
+            if (namsinh == "")
+            {
+                MessageBox.Show("Chưa nhập năm sinh!");
+                return false;
+            }
             if (tentk == "")
             {
-                MessageBox.Show("Chưa nhập mã!");
+                MessageBox.Show("Chưa nhập tên tài khoản!");
                 return false;
             }
             if (mk == "")
             {
-                MessageBox.Show("Chưa nhập mã!");
+                MessageBox.Show("Chưa nhập mật khẩu!");
                 return false;
             }
             if (quyen == "")
@@ -68,6 +82,19 @@ namespace BTaplonVPP
             }
             return false;
         }
+        public bool Isvalid_TKMK(string tk, string mk)
+        {
+            string sql = "select * from tbNhanSu where TenTaiKhoan=@ttk and MatKhau =@mk";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@ttk",tk),
+            new SqlParameter("@mk",mk)
+            };
+            if (kn.ReadData(sql, sp).Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
         public bool Login(string tk, string mk )
         {
             string sql = "select * from tbNhanSu where TenTaiKhoan= @tk and MatKhau = @mk ";
@@ -81,13 +108,17 @@ namespace BTaplonVPP
             }
             return false;
         }
-        public  void CreateNS(string mans, string tentk, string mk, string quyen)
+        public  void CreateNS(string mans, string tenns, string dc, string sdt, string namsinh,string tentk, string mk, string quyen)
         {
-            if (check(mans, tentk, mk, quyen))
+            if (check(mans,tenns,dc,sdt,namsinh, tentk, mk, quyen))
             {
-                string sql = "INSERT INTO tbNhanSu(MaNS,TenTaiKhoan, MatKhau, Quyen) VALUES(@mans, @tentk, @mk, @quyen)";
+                string sql = "INSERT INTO tbNhanSu(MaNS,Ten,SDT,DiaChi,NamSinh,TenTaiKhoan, MatKhau, Quyen) VALUES(@mans,@ten,@sdt,@dc,@ns, @tentk, @mk, @quyen)";
                 SqlParameter[] sp = new SqlParameter[] {
                 new SqlParameter("mans", mans),
+                new SqlParameter("ten", tenns),
+                new SqlParameter("sdt", sdt),
+                new SqlParameter("dc", dc),
+                new SqlParameter("ns", namsinh),
                 new SqlParameter("tentk", tentk),
                 new SqlParameter("mk", mk),
                 new SqlParameter("quyen", quyen)
@@ -144,6 +175,37 @@ namespace BTaplonVPP
             }
 
             return mans; // Trả về mã nhân sự hoặc chuỗi rỗng nếu không tìm thấy
+        }
+        public string GetQuyen(string tk, string mk)
+        {
+            DataTable dataTable = new DataTable();
+            string quyen = string.Empty;
+            string sql = "SELECT Quyen FROM tbNhanSu WHERE TenTaiKhoan = @tk AND MatKhau = @mk";
+
+            SqlParameter[] parameters = new SqlParameter[] {
+            new SqlParameter("@tk", tk),
+            new SqlParameter("@mk", mk),
+            };
+
+    
+            dataTable = kn.ReadData(sql, parameters);
+
+        
+            if (dataTable.Rows.Count > 0)
+            {
+                DataRow row = dataTable.Rows[0];
+                quyen = row["Quyen"].ToString(); 
+            }
+
+            return quyen; 
+        }
+        public DataTable GetProfile(string mans)
+        {
+            string sql = "select TenTaiKhoan, Ten, DiaChi, SDT, NamSinh from tbNhanSu where MaNs=@ma";
+            SqlParameter[] sp = new SqlParameter[] {
+            new SqlParameter("@ma",mans)
+            };
+            return kn.ReadData(sql, sp);
         }
     }
 }

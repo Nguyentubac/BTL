@@ -106,6 +106,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(5, 48);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(565, 335);
             this.dataGridView2.TabIndex = 2;
             // 
@@ -139,6 +140,7 @@
             this.grv_dssp.Name = "grv_dssp";
             this.grv_dssp.RowHeadersWidth = 51;
             this.grv_dssp.RowTemplate.Height = 24;
+            this.grv_dssp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grv_dssp.Size = new System.Drawing.Size(321, 391);
             this.grv_dssp.TabIndex = 0;
             this.grv_dssp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dssp_CellClick);

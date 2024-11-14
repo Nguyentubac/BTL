@@ -18,20 +18,28 @@ namespace BTaplonVPP
         public string b;
         public string c;
         public string d;
+        public DateTime day;
+        public string f;
+        public string g;
+        public string h;
         NhanSu ns = new NhanSu();
-        public FAdminXacNhan(string a, string b, string c , string d)
+        public FAdminXacNhan(string a, string b, string c , string d, DateTime day, string f, string g, string h)
         {
             InitializeComponent();
             this.a = a;
             this.b = b;
             this.c = c; 
             this.d = d; 
+            this.day = day;
+            this.f = f;
+            this.g = g;
+            this.h = h;
         }
         private void button2_Click(object sender, EventArgs e)
         {
             if (ns.Login(txt_tentk.Text, txt_mk.Text))
             {
-                ns.CreateNS(a, b, c, d);
+                ns.CreateNS(a, b, c, d,day.ToString(),f,g,h);
                 this.Close();
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông báo");
                 FStaffManager fStaffManager = new FStaffManager();

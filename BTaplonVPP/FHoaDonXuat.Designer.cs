@@ -33,18 +33,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grv_dssp = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grv_dssp)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +62,7 @@
             // 
             this.btn_thoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.Location = new System.Drawing.Point(2, 2);
-            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(548, 39);
             this.btn_thoat.TabIndex = 6;
@@ -75,7 +75,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.btn_thoat);
             this.panel3.Location = new System.Drawing.Point(334, 394);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(552, 43);
             this.panel3.TabIndex = 1;
@@ -96,17 +96,26 @@
             this.panel4.Controls.Add(this.dataGridView2);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(332, 3);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(557, 386);
             this.panel4.TabIndex = 2;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(5, 48);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(549, 335);
+            this.dataGridView2.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(5, 3);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(550, 40);
             this.panel5.TabIndex = 1;
@@ -118,7 +127,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.grv_dssp);
             this.panel2.Location = new System.Drawing.Point(5, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(327, 440);
             this.panel2.TabIndex = 0;
@@ -127,10 +136,11 @@
             // 
             this.grv_dssp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grv_dssp.Location = new System.Drawing.Point(0, 42);
-            this.grv_dssp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grv_dssp.Margin = new System.Windows.Forms.Padding(2);
             this.grv_dssp.Name = "grv_dssp";
             this.grv_dssp.RowHeadersWidth = 51;
             this.grv_dssp.RowTemplate.Height = 24;
+            this.grv_dssp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grv_dssp.Size = new System.Drawing.Size(321, 391);
             this.grv_dssp.TabIndex = 0;
             this.grv_dssp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grv_dssp_CellClick);
@@ -142,18 +152,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(891, 444);
             this.panel1.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 48);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(549, 335);
-            this.dataGridView2.TabIndex = 2;
             // 
             // FHoaDonXuat
             // 
@@ -161,19 +163,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 463);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FHoaDonXuat";
             this.Text = "FHoaDonXuat";
             this.Load += new System.EventHandler(this.FHoaDonXuat_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grv_dssp)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,6 +17,7 @@ namespace BTaplonVPP
         ketnoi kncsdl = new ketnoi();
         NhanSu ns  = new NhanSu();
         public string mans;
+        public string quyen;
         public FLogin()
         {
       
@@ -59,10 +60,11 @@ namespace BTaplonVPP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            quyen = ns.GetQuyen(txt_tentk.Text, txt_mk.Text);
             mans = ns.GetMans(txt_tentk.Text, txt_mk.Text);
             if (ns.Login(txt_tentk.Text, txt_mk.Text))
             {
-                FManager fm = new FManager(mans);
+                FManager fm = new FManager(mans,quyen);
                 this.Hide();
                 fm.ShowDialog();
                 this.Show();

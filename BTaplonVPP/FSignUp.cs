@@ -28,30 +28,36 @@ namespace BTaplonVPP
            
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (ns.Isvalid_NS(txtMaNs.Text)){
-                MessageBox.Show("Đã Tồn Tại mã Nhân sự");
-            }
-            else if (MessageBox.Show("Bạn phải xác nhận quyền admin", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                if (txt_mk.Text == textBox1.Text)
-                {
-                    FAdminXacNhan fa = new FAdminXacNhan(txtMaNs.Text, txt_tentk.Text, txt_mk.Text, comboBox1.Text);
-                    fa.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("mật khẩu không khớp");
-                }
-            }
         
+        private void button2_Click(object sender, EventArgs e)
+        {   
+            if (ns.Isvalid_NS(txtMaNs.Text))
+                    {
+                        MessageBox.Show("Đã Tồn Tại mã Nhân sự");
+                    }else if(ns.Isvalid_TKMK(txt_tentk.Text, txt_mk.Text))
+                        {
+                            MessageBox.Show("Tài khoản đã tồn tại", "Thông báo");
+                        }
+                    else if (MessageBox.Show("Bạn phải xác nhận quyền admin", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        if (txt_mk.Text == txt_nlmk.Text)
+                        {
+                            FAdminXacNhan fa = new FAdminXacNhan(txtMaNs.Text,txttns.Text,txtsdt.Text,txtdc.Text,dateTimePicker1.Value, txt_tentk.Text, txt_mk.Text, comboBox1.Text);
+                            fa.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("mật khẩu không khớp");
+                        }
+                    }
+                }
+                
+            
                 
             
         }
 
 
     }
-}
+
