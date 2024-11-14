@@ -38,3 +38,4 @@ E:\BTL\BTaplonVPP\obj\Debug\BTaplonVPP.csproj.GenerateResource.cache
 E:\BTL\BTaplonVPP\obj\Debug\BTaplonVPP.csproj.CoreCompileInputs.cache
 E:\BTL\BTaplonVPP\obj\Debug\BTaplonVPP.exe
 E:\BTL\BTaplonVPP\obj\Debug\BTaplonVPP.pdb
+E:\BTL\BTaplonVPP\obj\Debug\BTaplonVPP.csproj.ResolveComReference.cache

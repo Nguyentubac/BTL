@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices; // Để sử dụng COM Interop // Đặt tên không gian cho thư viện Excel
+using Excel = Microsoft.Office.Interop.Excel;
 namespace BTaplonVPP
 {
     
@@ -18,7 +19,15 @@ namespace BTaplonVPP
         SanPham sp = new SanPham();
         ketnoi kn = new ketnoi();
         HoaDonBan hdb = new HoaDonBan();
-        float tong = 0;
+        public float Tong { get; set; } = 0; // Tổng tiền
+        public string MNS { get; set; } // Mã số sản phẩm (MNS)
+        public int SL { get; set; } // Số lượng
+        public float DG { get; set; } // Đơn giá
+        public string MKH { get; set; } // Mã khách hàng
+        public string MSP { get; set; } // Mã sản phẩm
+        public float TongTien { get; set; } // Tổng tiền
+        public string TSP { get; set; } // Tên sản phẩm
+        public float GG { get; set; }
         public FManager()
         {
             InitializeComponent();
@@ -47,6 +56,7 @@ namespace BTaplonVPP
             {
                 dataTable.Columns.Add(column.Name, column.ValueType);
             }
+            txt_mns.Text = MNS;
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,9 +142,6 @@ namespace BTaplonVPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
@@ -207,7 +214,6 @@ namespace BTaplonVPP
                 dataGridView1.DataSource = sp.GetAllSP();
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             
@@ -227,7 +233,7 @@ namespace BTaplonVPP
             }
             total -= numericUpDown2.Value/100 * total;
             
-            tong = float.Parse(total.ToString());
+            Tong = float.Parse(total.ToString());
             // Cập nhật giá trị vào TextBox
             textBox1.Text = total.ToString("#,0") + "VNĐ"; // Định dạng tiền tệ
         }
@@ -272,19 +278,113 @@ namespace BTaplonVPP
                 if (!row.IsNewRow)
                 {
                     string MNS ="" ;
-                    MessageBox.Show(MNS);
                     string MKH = "";
-                    string MSP = row.Cells["MaSP"].Value.ToString(); 
-                    string TSP = row.Cells["TenSP"].Value.ToString(); 
-                    int SL = int.Parse(row.Cells["SoLuong"].Value.ToString()); 
-                    float DG =float.Parse(row.Cells["DonGia"].Value.ToString());
-                    float GG = float.Parse(numericUpDown2.Value.ToString());
-                    float tongtien = tong;
+                    MSP = row.Cells["MaSP"].Value.ToString(); 
+                    TSP = row.Cells["TenSP"].Value.ToString(); 
+                    SL = int.Parse(row.Cells["SoLuong"].Value.ToString()); 
+                    DG =float.Parse(row.Cells["DonGia"].Value.ToString());
+                    GG = float.Parse(numericUpDown2.Value.ToString());
+                    float tongtien = Tong;
 
-                    
                     hdb.AddInvoice(tongtien,MNS,MKH, MSP,TSP, SL, DG, GG);
                 }
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Excel.Application xcelApp = new Excel.Application();
+
+            try
+            {
+                xcelApp.Visible = true;
+                // Thêm một workbook mới
+                Excel.Workbook workbook = xcelApp.Workbooks.Add();
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+                // Gộp các ô từ A1 đến I12
+                for (int i = 1; i <= 11; i++)
+                {
+                    Excel.Range range = worksheet.Range[$"A{i}:H{i}"];
+                    range.Merge();
+                    if (i == 7 || i == 5)
+                    {
+                        range.Font.Name = "Arial";
+                        range.Font.Size = 18;
+                        range.Font.Bold = true;
+                    }
+                }
+                worksheet.Cells[4, 1] = "Địa chỉ: 123 Đường ABC, Thành phố XYZ";
+                // Ghi dấu "=================" vào dòng 5
+                worksheet.Cells[5, 1] = "'=======================================================";
+                worksheet.Cells[5, 1].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+                worksheet.Cells[7, 1] = "HOÁ ĐƠN BÁN HÀNG";
+                worksheet.Cells[7, 1].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                // Ghi "Khách Hàng :" vào dòng 8
+                worksheet.Cells[8, 1] = "Khách Hàng : " + MKH;
+                worksheet.Cells[9, 1] = "Ngày xuất: " + DateTime.Now.ToString("dd/MM/yyyy");
+                worksheet.Cells[10, 1] = "Ngân hàng Thương mại cổ phần Quân đội (MB Bank) STK 0836075402 / CTK : Nguyễn Tự Bắc";
+                worksheet.Cells[11, 1] = "Hình thức thanh toán";
+
+                worksheet.Cells[12, 1] = "STT";
+                worksheet.Cells[12, 2] = "Mã Sản Phẩm";
+                worksheet.Cells[12, 3] = "Tên Sản Phẩm";
+                worksheet.Cells[12, 4] = "Số Lượng";
+                worksheet.Cells[12, 5] = "Đơn Giá";
+                worksheet.Cells[12, 6] = "Thành Tiền";
+                int so_dong = dataTable.Rows.Count;
+
+                int index = 0;
+                foreach (DataRow existingRow in dataTable.Rows)
+                {   worksheet.Cells[13 + index, 1] = index + 1;
+                    worksheet.Cells[13 + index, 2] = existingRow[0].ToString();
+                    worksheet.Cells[13 + index, 3] = existingRow[1].ToString();
+                    worksheet.Cells[13 + index, 4] = existingRow[2].ToString();
+                    worksheet.Cells[13 + index, 5] = existingRow[3].ToString();
+                    worksheet.Cells[13 + index, 6] = (int.Parse(existingRow[2].ToString()) * int.Parse(existingRow[3].ToString())).ToString();
+
+                    for (int i = 1; i <= 7; i++) {
+                        Excel.Range cell = worksheet.Cells[13 + index, i];
+                        cell.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    }
+                    index++;
+                }
+                worksheet.Cells[13 + index, 1] = "Tổng tiền : ";
+                worksheet.Cells[13 + index, 6].Formula = string.Format("=SUM(F13:F{0})", 13 + index - 1);
+
+                worksheet.Cells[14 + index, 1] = "Giảm giá / Chiết Khấu : ";
+                worksheet.Cells[14 + index, 6] = GG + "%";
+
+                worksheet.Cells[15 + index, 1] = "Số tiền cần thanh toán : ";
+                worksheet.Cells[15 + index, 6] = Tong.ToString("#,0") + "VNĐ";
+                Excel.Range r = worksheet.Range[$"A{13+index}:G{15+index}"];
+                r.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                // tô màu 
+                //worksheet.Cells[13 + index, 6].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.LightBlue);
+
+                worksheet.Columns[1].AutoFit();
+                worksheet.Columns[2].AutoFit();
+                worksheet.Columns[3].AutoFit();
+                worksheet.Columns[4].AutoFit();
+                worksheet.Columns[5].AutoFit();
+                worksheet.Columns[6].AutoFit();
+                worksheet.Columns[7].AutoFit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+            }
+            finally
+            {
+                xcelApp.Quit();
+                Marshal.ReleaseComObject(xcelApp);
+                Console.WriteLine("Ứng dụng Excel đã đóng.");
+            }
+            // Giải phóng bộ nhớ
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        
+        
         }
     }
 }

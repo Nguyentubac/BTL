@@ -122,23 +122,28 @@ namespace BTaplonVPP
                 };
             kn.CreateUpdateDelete(sql, sp);
         }
-        public string getMans(string tk, string mk)
+        public string GetMans(string tk, string mk)
         {
             DataTable dataTable = new DataTable();
-            string mans = "";
-            string sql = "select MaNs from tbNhanSu where TenTaiKhoan= @tk and MatKhau = @mk ";
-            SqlParameter[] sp = new SqlParameter[] {
-            new SqlParameter("@tk",tk),
-            new SqlParameter("@mk",mk),
-            
-            }; 
-            dataTable = kn.ReadData(sql, sp);
+            string mans = string.Empty; // Khởi tạo biến mans là chuỗi rỗng
+            string sql = "SELECT MaNs FROM tbNhanSu WHERE TenTaiKhoan = @tk AND MatKhau = @mk";
+
+            SqlParameter[] parameters = new SqlParameter[] {
+        new SqlParameter("@tk", tk),
+        new SqlParameter("@mk", mk),
+    };
+
+            // Giả định rằng kn là một đối tượng kết nối database với phương thức ReadData
+            dataTable = kn.ReadData(sql, parameters);
+
+            // Kiểm tra xem có kết quả trả về hay không
             if (dataTable.Rows.Count > 0)
             {
-                DataRow r = dataTable.Rows[0];
-                mans = r["MaNs"].ToString(); // Lấy giá trị từ cột MaNs
+                DataRow row = dataTable.Rows[0];
+                mans = row["MaNs"].ToString(); // Lấy giá trị từ cột MaNs
             }
-            return mans;
+
+            return mans; // Trả về mã nhân sự hoặc chuỗi rỗng nếu không tìm thấy
         }
     }
 }

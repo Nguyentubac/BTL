@@ -42,7 +42,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_In_hoa_don = new System.Windows.Forms.Button();
             this.buttontt = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menus_1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +71,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_mns = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nsl)).BeginInit();
             this.panel3.SuspendLayout();
@@ -92,16 +93,17 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.cbb_loai);
             this.panel2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(619, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(464, 25);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(508, 62);
+            this.panel2.Size = new System.Drawing.Size(381, 50);
             this.panel2.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 6);
+            this.label3.Location = new System.Drawing.Point(160, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 3;
@@ -110,7 +112,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 3;
@@ -119,15 +122,15 @@
             // nsl
             // 
             this.nsl.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsl.Location = new System.Drawing.Point(213, 30);
-            this.nsl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nsl.Location = new System.Drawing.Point(160, 24);
+            this.nsl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nsl.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nsl.Name = "nsl";
-            this.nsl.Size = new System.Drawing.Size(105, 24);
+            this.nsl.Size = new System.Drawing.Size(79, 24);
             this.nsl.TabIndex = 2;
             this.nsl.Value = new decimal(new int[] {
             1,
@@ -139,10 +142,10 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(361, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(271, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 54);
+            this.button5.Size = new System.Drawing.Size(52, 44);
             this.button5.TabIndex = 5;
             this.button5.Text = "Xoá";
             this.button5.UseVisualStyleBackColor = true;
@@ -151,10 +154,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(436, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(327, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 54);
+            this.button1.Size = new System.Drawing.Size(52, 44);
             this.button1.TabIndex = 1;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
@@ -176,10 +179,10 @@
             "Sản Phẩm Công Nghệ và Phụ Kiện",
             "Đồ Dùng Cho Không Gian Làm Việc",
             "Các Sản Phẩm Khác"});
-            this.cbb_loai.Location = new System.Drawing.Point(5, 30);
-            this.cbb_loai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbb_loai.Location = new System.Drawing.Point(4, 24);
+            this.cbb_loai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbb_loai.Name = "cbb_loai";
-            this.cbb_loai.Size = new System.Drawing.Size(185, 24);
+            this.cbb_loai.Size = new System.Drawing.Size(140, 24);
             this.cbb_loai.TabIndex = 0;
             this.cbb_loai.SelectedIndexChanged += new System.EventHandler(this.cbb_loai_SelectedIndexChanged);
             // 
@@ -189,22 +192,21 @@
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(619, 98);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(464, 80);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(508, 369);
+            this.panel3.Size = new System.Drawing.Size(381, 300);
             this.panel3.TabIndex = 2;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 5);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(499, 321);
+            this.dataGridView2.Size = new System.Drawing.Size(374, 261);
             this.dataGridView2.TabIndex = 3;
             this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
             this.dataGridView2.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView2_RowsAdded);
@@ -213,16 +215,17 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(157, 332);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(118, 270);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 24);
+            this.textBox1.Size = new System.Drawing.Size(197, 24);
             this.textBox1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 335);
+            this.label2.Location = new System.Drawing.Point(52, 272);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 1;
@@ -232,20 +235,19 @@
             // 
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.numericUpDown2);
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btn_In_hoa_don);
             this.panel4.Controls.Add(this.buttontt);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(619, 474);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(464, 385);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(505, 79);
+            this.panel4.Size = new System.Drawing.Size(379, 64);
             this.panel4.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 17);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 7;
@@ -254,36 +256,37 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(8, 39);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown2.Location = new System.Drawing.Point(6, 32);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(80, 24);
+            this.numericUpDown2.Size = new System.Drawing.Size(60, 24);
             this.numericUpDown2.TabIndex = 6;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
-            // button4
+            // btn_In_hoa_don
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(329, 11);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(173, 58);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "In hóa đơn";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_In_hoa_don.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_In_hoa_don.Location = new System.Drawing.Point(247, 9);
+            this.btn_In_hoa_don.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_In_hoa_don.Name = "btn_In_hoa_don";
+            this.btn_In_hoa_don.Size = new System.Drawing.Size(130, 47);
+            this.btn_In_hoa_don.TabIndex = 4;
+            this.btn_In_hoa_don.Text = "In hóa đơn";
+            this.btn_In_hoa_don.UseVisualStyleBackColor = true;
+            this.btn_In_hoa_don.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttontt
             // 
             this.buttontt.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttontt.Location = new System.Drawing.Point(145, 11);
-            this.buttontt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttontt.Location = new System.Drawing.Point(109, 9);
+            this.buttontt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttontt.Name = "buttontt";
-            this.buttontt.Size = new System.Drawing.Size(173, 58);
+            this.buttontt.Size = new System.Drawing.Size(130, 47);
             this.buttontt.TabIndex = 5;
             this.buttontt.Text = "Thanh toán";
             this.buttontt.UseVisualStyleBackColor = true;
@@ -304,8 +307,8 @@
             this.hỗTrợToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1139, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(854, 25);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -476,28 +479,30 @@
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 31);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 25);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(603, 522);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(452, 424);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txt_mns);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 61);
+            this.panel1.Size = new System.Drawing.Size(448, 50);
             this.panel1.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 7);
+            this.label4.Location = new System.Drawing.Point(2, 6);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 31);
             this.label4.TabIndex = 0;
@@ -506,28 +511,36 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 67);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 56);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(597, 452);
+            this.dataGridView1.Size = new System.Drawing.Size(448, 367);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // txt_mns
+            // 
+            this.txt_mns.Enabled = false;
+            this.txt_mns.Location = new System.Drawing.Point(296, 3);
+            this.txt_mns.Name = "txt_mns";
+            this.txt_mns.Size = new System.Drawing.Size(147, 24);
+            this.txt_mns.TabIndex = 1;
+            // 
             // FManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 564);
+            this.ClientSize = new System.Drawing.Size(854, 458);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FManager";
             this.Text = "Quản Lý Cửa Hàng Văn Phòng Phẩm";
             this.Load += new System.EventHandler(this.FManager_Load);
@@ -585,7 +598,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_In_hoa_don;
         private System.Windows.Forms.Button buttontt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhàCungCấpToolStripMenuItem;
@@ -595,5 +608,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_mns;
     }
 }
