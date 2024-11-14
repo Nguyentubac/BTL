@@ -19,11 +19,11 @@ namespace BTaplonVPP
         }
         public DataTable GetCTHD(string ma)
         {
-            string sql = "select  MaNS,MaKH, MaSP,TenSP,SoLuong,DonGia,GiamGia from tbChiTietHoaDonBan Where MaHDN = @ma";
-            SqlParameter[] hdb = new SqlParameter[] {
+            string sql = "select MaNs, MaKH, MaSP,TenSP,SoLuong,DonGia from tbChiTietHoaDonNhap Where MaHDN = @ma";
+            SqlParameter[] hdn = new SqlParameter[] {
             new SqlParameter("@ma",ma)
             };
-            return kn.ReadData(sql, hdb);
+            return kn.ReadData(sql, hdn);
         }
         public string CreateHDB(float tt)
         {

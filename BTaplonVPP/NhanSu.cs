@@ -129,9 +129,9 @@ namespace BTaplonVPP
             string sql = "SELECT MaNs FROM tbNhanSu WHERE TenTaiKhoan = @tk AND MatKhau = @mk";
 
             SqlParameter[] parameters = new SqlParameter[] {
-        new SqlParameter("@tk", tk),
-        new SqlParameter("@mk", mk),
-    };
+            new SqlParameter("@tk", tk),
+            new SqlParameter("@mk", mk),
+            };
 
             // Giả định rằng kn là một đối tượng kết nối database với phương thức ReadData
             dataTable = kn.ReadData(sql, parameters);

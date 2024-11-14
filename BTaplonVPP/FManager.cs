@@ -20,7 +20,7 @@ namespace BTaplonVPP
         ketnoi kn = new ketnoi();
         HoaDonBan hdb = new HoaDonBan();
         public float Tong { get; set; } = 0; // Tổng tiền
-        public string MNS { get; set; } // Mã số sản phẩm (MNS)
+        public string MNS { get; set; } 
         public int SL { get; set; } // Số lượng
         public float DG { get; set; } // Đơn giá
         public string MKH { get; set; } // Mã khách hàng
@@ -28,10 +28,11 @@ namespace BTaplonVPP
         public float TongTien { get; set; } // Tổng tiền
         public string TSP { get; set; } // Tên sản phẩm
         public float GG { get; set; }
-        public FManager()
+        public FManager(string mans)
         {
             InitializeComponent();
             UpdateTotal();
+            MNS = mans;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -277,8 +278,8 @@ namespace BTaplonVPP
             {
                 if (!row.IsNewRow)
                 {
-                    string MNS ="" ;
-                    string MKH = "";
+                    
+                    string MKH = "KH001";
                     MSP = row.Cells["MaSP"].Value.ToString(); 
                     TSP = row.Cells["TenSP"].Value.ToString(); 
                     SL = int.Parse(row.Cells["SoLuong"].Value.ToString()); 

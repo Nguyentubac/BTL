@@ -16,7 +16,7 @@ namespace BTaplonVPP
         bool flagEye = true;
         ketnoi kncsdl = new ketnoi();
         NhanSu ns  = new NhanSu();
-        
+        public string mans;
         public FLogin()
         {
       
@@ -58,11 +58,11 @@ namespace BTaplonVPP
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   
-            kncsdl.mans = ns.GetMans(txt_tentk.Text, txt_mk.Text);
-            if(ns.Login(txt_tentk.Text, txt_mk.Text))
+        {
+            mans = ns.GetMans(txt_tentk.Text, txt_mk.Text);
+            if (ns.Login(txt_tentk.Text, txt_mk.Text))
             {
-                FManager fm = new FManager();
+                FManager fm = new FManager(mans);
                 this.Hide();
                 fm.ShowDialog();
                 this.Show();
