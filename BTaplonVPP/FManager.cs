@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -201,7 +202,7 @@ namespace BTaplonVPP
         {
             string tentk = cbb_loai.SelectedItem.ToString();
             dataGridView1.DataSource = sp.GetTimKiem(tentk);
-            if(cbb_loai.SelectedItem.ToString() == "")
+            if(cbb_loai.SelectedItem.ToString() == "Tất Cả")
             {
                 dataGridView1.DataSource = sp.GetAllSP();
             }
@@ -270,8 +271,8 @@ namespace BTaplonVPP
             {
                 if (!row.IsNewRow)
                 {
-                    
-                    string MNS = kn.mans;
+                    string MNS ="" ;
+                    MessageBox.Show(MNS);
                     string MKH = "";
                     string MSP = row.Cells["MaSP"].Value.ToString(); 
                     string TSP = row.Cells["TenSP"].Value.ToString(); 

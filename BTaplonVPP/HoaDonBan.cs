@@ -33,9 +33,9 @@ namespace BTaplonVPP
             string sql = "INSERT INTO tbHoaDonBan (MaHDB, TongTien, NgayBan) VALUES (@ma, @tt, @nb)";
             SqlParameter[] parameters = new SqlParameter[]
             {
-        new SqlParameter("@ma", mahd),
-        new SqlParameter("@tt", tt),
-        new SqlParameter("@nb", DateTime.Now.ToString("dd-MM-yyyy").ToString())
+                new SqlParameter("@ma", mahd),
+                new SqlParameter("@tt", tt),
+                new SqlParameter("@nb", DateTime.Now.ToString("dd-MM-yyyy").ToString())
             };
 
             try
@@ -58,14 +58,14 @@ namespace BTaplonVPP
 
             SqlParameter[] parameters = new SqlParameter[]
             {
-        new SqlParameter("@mahd", mahd),
-        new SqlParameter("@mans", mans),
-        new SqlParameter("@makh", makh),
-        new SqlParameter("@masp", masp),
-        new SqlParameter("@tensp", tensp),
-        new SqlParameter("@sl", soluong),
-        new SqlParameter("@dg", dongia),
-        new SqlParameter("@gg", giamgia)
+                new SqlParameter("@mahd", mahd),
+                new SqlParameter("@mans", mans),
+                new SqlParameter("@makh", makh),
+                new SqlParameter("@masp", masp),
+                new SqlParameter("@tensp", tensp),
+                new SqlParameter("@sl", soluong),
+                new SqlParameter("@dg", dongia),
+                new SqlParameter("@gg", giamgia)
             };
 
             try
@@ -76,11 +76,13 @@ namespace BTaplonVPP
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi thêm chi tiết hóa đơn: " + ex.Message);
+                MessageBox.Show("ngoại lệ ");
             }
         }
 
         public void AddInvoice(float tt, string mans, string makh, string masp, string tensp, int soluong, float dongia, float giamgia)
-        {
+        {   
+
             string mahd = CreateHDB(tt); // Tạo hóa đơn và lấy mã
             CreateCTHDB(mahd, mans, makh, masp, tensp, soluong, dongia, giamgia); // Tạo chi tiết hóa đơn
         }
