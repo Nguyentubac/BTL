@@ -40,6 +40,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_mns = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.btn_In_hoa_don = new System.Windows.Forms.Button();
@@ -50,6 +52,7 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtExcelDanhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,11 +67,8 @@
             this.thôngTinCửaHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_mns = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nsl)).BeginInit();
             this.panel3.SuspendLayout();
@@ -243,6 +243,24 @@
             this.panel4.Size = new System.Drawing.Size(379, 64);
             this.panel4.TabIndex = 3;
             // 
+            // txt_mns
+            // 
+            this.txt_mns.Enabled = false;
+            this.txt_mns.Location = new System.Drawing.Point(72, 31);
+            this.txt_mns.Name = "txt_mns";
+            this.txt_mns.Size = new System.Drawing.Size(96, 24);
+            this.txt_mns.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(72, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Mã nhân sự";
+            this.label6.Click += new System.EventHandler(this.label5_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -352,6 +370,13 @@
             this.quảnLýSảnPhẩmToolStripMenuItem.Text = "Quản lý sản phẩm";
             this.quảnLýSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSảnPhẩmToolStripMenuItem_Click);
             // 
+            // xuấtExelDanhSáchSảnPhẩmToolStripMenuItem
+            // 
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Name = "xuấtExelDanhSáchSảnPhẩmToolStripMenuItem";
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Text = "Xuất excel danh sách sản phẩm";
+            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem_Click);
+            // 
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -374,6 +399,7 @@
             this.xuấtExcelDanhSáchNhânViênToolStripMenuItem.Name = "xuấtExcelDanhSáchNhânViênToolStripMenuItem";
             this.xuấtExcelDanhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.xuấtExcelDanhSáchNhânViênToolStripMenuItem.Text = "Xuất excel danh sách nhân viên";
+            this.xuấtExcelDanhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.xuấtExcelDanhSáchNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýHóaĐơnToolStripMenuItem
             // 
@@ -404,6 +430,7 @@
             this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Name = "xuấtExcelDanhSáchHóaĐơnToolStripMenuItem";
             this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Text = "Xuất excel danh sách hóa đơn";
+            this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Click += new System.EventHandler(this.xuấtExcelDanhSáchHóaĐơnToolStripMenuItem_Click);
             // 
             // thôngTinKháchHàngToolStripMenuItem
             // 
@@ -462,14 +489,6 @@
             this.panel1.Size = new System.Drawing.Size(448, 50);
             this.panel1.TabIndex = 0;
             // 
-            // txt_mns
-            // 
-            this.txt_mns.Enabled = false;
-            this.txt_mns.Location = new System.Drawing.Point(72, 31);
-            this.txt_mns.Name = "txt_mns";
-            this.txt_mns.Size = new System.Drawing.Size(96, 24);
-            this.txt_mns.TabIndex = 1;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -493,22 +512,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(448, 367);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 17);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Mã nhân sự";
-            this.label6.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // xuấtExelDanhSáchSảnPhẩmToolStripMenuItem
-            // 
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Name = "xuấtExelDanhSáchSảnPhẩmToolStripMenuItem";
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Text = "Xuất excel danh sách sản phẩm";
             // 
             // FManager
             // 

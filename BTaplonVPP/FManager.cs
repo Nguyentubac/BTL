@@ -17,6 +17,7 @@ namespace BTaplonVPP
     {
         DataTable dataTable = new DataTable();
         SanPham sp = new SanPham();
+        NhanSu ns = new NhanSu();
         ketnoi kn = new ketnoi();
         HoaDonBan hdb = new HoaDonBan();
         public string quyenht;
@@ -114,7 +115,7 @@ namespace BTaplonVPP
             fHoaDonXuat.ShowDialog();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)    
         {
             int i = e.RowIndex;
             if (i >= 0)
@@ -422,6 +423,217 @@ namespace BTaplonVPP
             xuấtExelDanhSáchSảnPhẩmToolStripMenuItem.Enabled = false;
             xuấtExcelDanhSáchNhânViênToolStripMenuItem.Enabled = false;
             xuấtExcelDanhSáchHóaĐơnToolStripMenuItem.Enabled = false;
+        }
+
+        private void xuấtExelDanhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel.Application xcelApp = new Excel.Application();
+            try
+            {
+                xcelApp.Visible = true;
+                Excel.Workbook workbook = xcelApp.Workbooks.Add();
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+
+                int currentindex = 1;
+                Excel.Range range = worksheet.Range[$"A{currentindex}:F{currentindex}"];
+                range.Merge();
+                worksheet.Cells[currentindex, 1].Value = "Danh Sách Sản Phẩm";
+                worksheet.Cells[currentindex, 1].Font.Name = "Arial";
+                worksheet.Cells[currentindex, 1].Font.Size = 18;
+                worksheet.Cells[currentindex, 1].Font.Bold = true;
+                currentindex++;
+                worksheet.Cells[currentindex, 1].Value = "STT";
+                worksheet.Cells[currentindex, 2].Value = "Mã Sản Phẩm ";
+                worksheet.Cells[currentindex, 3].Value = "Tên Sản Phẩm";
+                worksheet.Cells[currentindex, 4].Value = "Số Lượng";
+                worksheet.Cells[currentindex, 5].Value = "Đơn Giá";
+                worksheet.Cells[currentindex, 6].Value = "Loại Sản Phẩm";
+                Excel.Range range2 = worksheet.Range[$"A{currentindex}:F{currentindex}"];
+                range2.Font.Size = 14;
+                range2.Font.Bold = true;
+                range2.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                DataTable dt = new DataTable();
+                dt = sp.GetAllSP();
+                int index = 0;
+                currentindex++;
+                foreach (DataRow existingRow in dt.Rows)
+                {
+                    worksheet.Cells[currentindex, 1] = index + 1;
+                    worksheet.Cells[currentindex, 2] = existingRow[0].ToString();
+                    worksheet.Cells[currentindex, 3] = existingRow[1].ToString();
+                    worksheet.Cells[currentindex, 4] = existingRow[2].ToString();
+                    worksheet.Cells[currentindex, 5] = existingRow[3].ToString();
+                    worksheet.Cells[currentindex, 6] = existingRow[4].ToString();
+                    //worksheet.Cells[currentindex, 7] = existingRow[7].ToString();
+                    currentindex++;
+                    for (int i = 1; i <= 6; i++)
+                    {
+                        Excel.Range cell = worksheet.Cells[currentindex, i];
+                        cell.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    }
+                    index++;
+                }
+                worksheet.Columns[1].AutoFit();
+                worksheet.Columns[2].AutoFit();
+                worksheet.Columns[3].AutoFit();
+                worksheet.Columns[4].AutoFit();
+                worksheet.Columns[5].AutoFit();
+                worksheet.Columns[6].AutoFit();
+                //worksheet.Columns[7].AutoFit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+            }
+            finally
+            {
+                xcelApp.Quit();
+                Marshal.ReleaseComObject(xcelApp);
+                Console.WriteLine("Ứng dụng Excel đã đóng.");
+            }
+            // Giải phóng bộ nhớ
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+
+        }
+    
+
+        private void xuấtExcelDanhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel.Application xcelApp = new Excel.Application();
+            try
+            {
+                xcelApp.Visible = true;
+                Excel.Workbook workbook = xcelApp.Workbooks.Add();
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+
+                int currentindex = 1;
+                Excel.Range range = worksheet.Range[$"A{currentindex}:G{currentindex}"];
+                range.Merge();
+                worksheet.Cells[currentindex, 1].Value = "Danh Sách Nhân Viên";
+                worksheet.Cells[currentindex, 1].Font.Name = "Arial";
+                worksheet.Cells[currentindex, 1].Font.Size = 18;
+                worksheet.Cells[currentindex, 1].Font.Bold = true;
+                currentindex++;
+                worksheet.Cells[currentindex, 1].Value = "STT";
+                worksheet.Cells[currentindex, 2].Value = "Mã Nhân Sự ";
+                worksheet.Cells[currentindex, 3].Value = "Họ Và Tên";
+                worksheet.Cells[currentindex, 4].Value = "SĐT";
+                worksheet.Cells[currentindex, 5].Value = "Địa chỉ";
+                worksheet.Cells[currentindex, 6].Value = "Năm Sinh";
+                worksheet.Cells[currentindex, 7].Value = "Quyền";
+                Excel.Range range2 = worksheet.Range[$"A{currentindex}:G{currentindex}"];
+                range2.Font.Size = 14;
+                range2.Font.Bold = true;
+                range2.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                currentindex++;
+                DataTable dt = new DataTable();
+                dt = ns.GetAllNS();
+                int index = 0;
+                foreach (DataRow existingRow in dt.Rows)
+                {
+                    worksheet.Cells[currentindex, 1] = index + 1;
+                    worksheet.Cells[currentindex, 2] = existingRow[0].ToString();
+                    worksheet.Cells[currentindex, 3] = existingRow[1].ToString();
+                    worksheet.Cells[currentindex, 4] = existingRow[2].ToString();
+                    worksheet.Cells[currentindex, 5] = existingRow[3].ToString();
+                    worksheet.Cells[currentindex, 6] = existingRow[4].ToString();
+                    worksheet.Cells[currentindex, 7] = existingRow[7].ToString();
+                    currentindex++;
+                    for (int i = 1; i <= 7; i++)
+                    {
+                        Excel.Range cell = worksheet.Cells[currentindex, i];
+                        cell.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    }
+                    index++;
+                }
+                worksheet.Columns[1].AutoFit();
+                worksheet.Columns[2].AutoFit();
+                worksheet.Columns[3].AutoFit();
+                worksheet.Columns[4].AutoFit();
+                worksheet.Columns[5].AutoFit();
+                worksheet.Columns[6].AutoFit();
+                worksheet.Columns[7].AutoFit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+            }
+            finally
+            {
+                xcelApp.Quit();
+                Marshal.ReleaseComObject(xcelApp);
+                Console.WriteLine("Ứng dụng Excel đã đóng.");
+            }
+            // Giải phóng bộ nhớ
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+
+        
+    }
+
+        private void xuấtExcelDanhSáchHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel.Application xcelApp = new Excel.Application();
+            try
+            {
+                xcelApp.Visible = true;
+                Excel.Workbook workbook = xcelApp.Workbooks.Add();
+                Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+
+                int currentindex = 1;
+                Excel.Range range = worksheet.Range[$"A{currentindex}:D{currentindex}"];
+                range.Merge();
+                worksheet.Cells[currentindex, 1].Value = "Danh sách hoá đơn bán";
+                worksheet.Cells[currentindex, 1].Font.Name = "Arial";
+                worksheet.Cells[currentindex, 1].Font.Size = 18;
+                worksheet.Cells[currentindex, 1].Font.Bold = true;
+                currentindex++;
+                Excel.Range range2 = worksheet.Range[$"A{currentindex}:D{currentindex}"];
+                range2.Font.Size = 14;
+                range2.Font.Bold = true;
+                range2.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                currentindex++;
+                DataTable dt = new DataTable();
+                dt = hdb.GetAllHDB();
+                int index = 0;
+                foreach (DataRow existingRow in dt.Rows)
+                {
+                    worksheet.Cells[currentindex, 1] = index + 1;
+                    worksheet.Cells[currentindex, 2] = existingRow[0].ToString();
+                    worksheet.Cells[currentindex, 3] = existingRow[1].ToString();
+                    worksheet.Cells[currentindex, 4] = existingRow[2].ToString();
+                    currentindex++;
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        Excel.Range cell = worksheet.Cells[currentindex, i];
+                        cell.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    }
+                    index++;
+                }
+                worksheet.Columns[1].AutoFit();
+                worksheet.Columns[2].AutoFit();
+                worksheet.Columns[3].AutoFit();
+                worksheet.Columns[4].AutoFit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+            }
+            finally
+            {
+                xcelApp.Quit();
+                Marshal.ReleaseComObject(xcelApp);
+                Console.WriteLine("Ứng dụng Excel đã đóng.");
+            }
+            // Giải phóng bộ nhớ
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+
         }
     }
 }
